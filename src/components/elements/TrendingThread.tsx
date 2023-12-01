@@ -1,11 +1,7 @@
 export default function TrendingThread({
-    title,
-    user,
-    imageUrl,
+    thread
 }: {
-    title?: string,
-    user?: string,
-    imageUrl?: string,
+    thread: any
 }) {
     return (
         <div style={{
@@ -15,7 +11,7 @@ export default function TrendingThread({
             alignItems: 'center',
             justifyContent: 'center',
             borderRadius: 8,
-            background: 'url('+imageUrl+')',
+            background: 'url('+thread.imageUrl+')',
             backgroundColor: 'grey',
             backgroundBlendMode: 'multiply',
             backgroundSize: 'cover',
@@ -36,13 +32,13 @@ export default function TrendingThread({
                     fontSize: 16,
                     fontWeight: 700
                 }}>
-                    {title}
+                    {thread.title}
                 </div>
                 <div style={{
                     fontSize: 12,
                     fontWeight: 500
                 }}>
-                    Posted by {user}
+                    Posted by {thread.user.nickname}
                 </div>
             </div>
         </div>

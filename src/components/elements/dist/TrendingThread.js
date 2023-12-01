@@ -1,7 +1,7 @@
 "use strict";
 exports.__esModule = true;
 function TrendingThread(_a) {
-    var title = _a.title, user = _a.user, imageUrl = _a.imageUrl;
+    var thread = _a.thread;
     return (React.createElement("div", { style: {
             width: 226,
             height: 206,
@@ -9,7 +9,7 @@ function TrendingThread(_a) {
             alignItems: 'center',
             justifyContent: 'center',
             borderRadius: 8,
-            background: 'url(' + imageUrl + ')',
+            background: 'url(' + thread.imageUrl + ')',
             backgroundColor: 'grey',
             backgroundBlendMode: 'multiply',
             backgroundSize: 'cover',
@@ -29,12 +29,12 @@ function TrendingThread(_a) {
             React.createElement("div", { style: {
                     fontSize: 16,
                     fontWeight: 700
-                } }, title),
+                } }, thread.title),
             React.createElement("div", { style: {
                     fontSize: 12,
                     fontWeight: 500
                 } },
                 "Posted by ",
-                user))));
+                thread.user.nickname))));
 }
 exports["default"] = TrendingThread;
