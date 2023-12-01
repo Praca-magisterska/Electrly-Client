@@ -1,17 +1,17 @@
-export default function TrendingThread({
-    thread
+export default function TrendingThreadCard({
+    category
 }: {
-    thread: any
+    category: any
 }) {
     return (
         <div style={{
-            width: 226,
-            height: 206,
+            width: 200,
+            height: 160,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             borderRadius: 8,
-            background: 'url('+thread.imageUrl+')',
+            background: 'url('+category.imageUrl+')',
             backgroundColor: '#555555',
             backgroundBlendMode: 'multiply',
             backgroundSize: 'cover',
@@ -23,22 +23,17 @@ export default function TrendingThread({
                 margin: 16,
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "flex-start",
-                justifyContent: "flex-end",
+                alignItems: "center",
+                justifyContent: "center",
                 color: "white",
                 gap: 8
             }}>
                 <div style={{
                     fontSize: 16,
-                    fontWeight: 700
+                    fontWeight: 700,
+                    textAlign: "center"
                 }}>
-                    {thread.title}
-                </div>
-                <div style={{
-                    fontSize: 12,
-                    fontWeight: 500
-                }}>
-                    Posted by {thread.user.nickname}
+                    {category.name}
                 </div>
             </div>
         </div>

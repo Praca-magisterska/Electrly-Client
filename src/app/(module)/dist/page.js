@@ -3,7 +3,7 @@ exports.__esModule = true;
 var Content_1 = require("@/components/layouts/Content");
 var Page_1 = require("@/components/layouts/Page");
 var ContentSection_1 = require("@/components/layouts/ContentSection");
-var TrendingThread_1 = require("@/components/elements/cards/TrendingThread");
+var TrendingThreadCard_1 = require("@/components/elements/cards/TrendingThreadCard");
 function Signin() {
     var trendingThreads = [
         {
@@ -39,7 +39,7 @@ function Signin() {
     ];
     return (React.createElement(Page_1["default"], null,
         React.createElement(Content_1["default"], { header: React.createElement("div", null), footer: React.createElement("div", null) },
-            React.createElement(ContentSection_1["default"], { title: "Trending Today" }, trendingThreads.map(function (thread, index) { return (React.createElement(TrendingThread_1["default"], { key: index, thread: thread })); })),
+            React.createElement(ContentSection_1["default"], { title: "Trending Today" }, trendingThreads.map(function (thread, index) { return (React.createElement(TrendingThreadCard_1["default"], { key: index, thread: thread })); })),
             React.createElement(ContentSection_1["default"], { title: "Nav", showTitle: false }),
             React.createElement(ContentSection_1["default"], { title: "Threads & Discussion" }))));
 }

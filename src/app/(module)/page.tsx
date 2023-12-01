@@ -8,7 +8,7 @@ import Page from "@/components/layouts/Page";
 import Image from 'next/image'
 import Link from 'next/link'
 import ContentSection from "@/components/layouts/ContentSection";
-import TrendingThread from "@/components/elements/cards/TrendingThread";
+import TrendingThreadCard from "@/components/elements/cards/TrendingThreadCard";
 
 export default function Signin() {
     let trendingThreads = [
@@ -59,7 +59,7 @@ export default function Signin() {
             }>
             <ContentSection title="Trending Today">
               {trendingThreads.map((thread, index) => (
-                <TrendingThread key={index} thread={thread} />
+                <TrendingThreadCard key={index} thread={thread} />
               ))}
             </ContentSection>
             <ContentSection title="Nav" showTitle={false}>
