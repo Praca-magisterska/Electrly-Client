@@ -159,15 +159,26 @@ function useUser() {
             return [2 /*return*/];
         });
     }); };
+    // const doGetUser = async () => {
+    //     getUser('me')
+    //     .then((res) => {
+    //         console.log(res);
+    //         return res;
+    //     })
+    //     .catch((err) => {
+    //         return err;
+    //     })
+    // }
     var doGetUser = function () { return __awaiter(_this, void 0, void 0, function () {
         return __generator(this, function (_a) {
-            UserApi_1.getUser('me')
-                .then(function (res) {
-                return res;
-            })["catch"](function (err) {
-                return err;
-            });
-            return [2 /*return*/];
+            return [2 /*return*/, new Promise(function (resolve, reject) {
+                    UserApi_1.getUser('me')
+                        .then(function (response) {
+                        resolve(response);
+                    })["catch"](function (error) {
+                        reject(error);
+                    });
+                })];
         });
     }); };
     return {

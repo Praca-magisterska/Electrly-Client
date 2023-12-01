@@ -1,8 +1,9 @@
 "use strict";
 exports.__esModule = true;
+var link_1 = require("next/link");
 function TrendingThreadCard(_a) {
     var thread = _a.thread;
-    return (React.createElement("div", { style: {
+    return (React.createElement(link_1["default"], { href: '/threads/' + thread.id, style: {
             width: 226,
             height: 206,
             display: 'flex',

@@ -1,11 +1,11 @@
 "use strict";
 exports.__esModule = true;
-var page_1 = require("@/components/layouts/page");
+var Page_1 = require("@/components/layouts/Page");
 var Button_1 = require("@mui/material/Button");
-var FormContent_1 = require("@/components/layouts/FormContent");
+var PageFormContent_1 = require("@/components/layouts/PageFormContent");
 function Signin() {
-    return (React.createElement(page_1["default"], null,
-        React.createElement(FormContent_1["default"], { header: 'Grant Access' },
+    return (React.createElement(Page_1["default"], null,
+        React.createElement(PageFormContent_1["default"], { header: 'Grant Access' },
             React.createElement("div", { style: {
                     fontSize: "1rem",
                     fontWeight: "bold"

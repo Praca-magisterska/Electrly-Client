@@ -1,7 +1,7 @@
 "use client"
-import Page from "@/components/layouts/page";
+import Page from "@/components/layouts/Page";
 import Button from '@mui/material/Button';
-import FormContent from "@/components/layouts/FormContent";
+import PageFormContent from "@/components/layouts/PageFormContent";
 
 import useUser from "@/hooks/useUser";
 
@@ -10,7 +10,7 @@ export default function Signin() {
 
     return (
         <Page>
-            <FormContent
+            <PageFormContent
                 header='Sign out'
             >
                 <div style={{
@@ -38,7 +38,7 @@ export default function Signin() {
                         borderRadius: 8,
                         color: '#ffffff',
                     }}>Sign out</Button>
-            </FormContent>
+            </PageFormContent>
         </Page>
     )
 }

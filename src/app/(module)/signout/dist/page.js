@@ -1,14 +1,14 @@
 "use client";
 "use strict";
 exports.__esModule = true;
-var page_1 = require("@/components/layouts/page");
+var Page_1 = require("@/components/layouts/Page");
 var Button_1 = require("@mui/material/Button");
-var FormContent_1 = require("@/components/layouts/FormContent");
+var PageFormContent_1 = require("@/components/layouts/PageFormContent");
 var useUser_1 = require("@/hooks/useUser");
 function Signin() {
     var userHook = useUser_1["default"]();
-    return (React.createElement(page_1["default"], null,
-        React.createElement(FormContent_1["default"], { header: 'Sign out' },
+    return (React.createElement(Page_1["default"], null,
+        React.createElement(PageFormContent_1["default"], { header: 'Sign out' },
             React.createElement("div", { style: {
                     width: '100%',
                     display: 'flex',

@@ -18,6 +18,11 @@ import UserContext from '@/context/UserContext';
 
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Air from '@/components/layouts/Air'
+import AccountAir from '@/components/modules/airs/AccountAir'
+import SettingsAir from '@/components/modules/airs/SettingsAir'
+import HelpAir from '@/components/modules/airs/HelpAir'
+import SearchAir from '@/components/modules/airs/SearchAir'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -46,8 +51,12 @@ export default function RootLayout({
                     <BasicAppBar />
                   }
                   air = {
-                    <div>
-                    </div>
+                    <>
+                      <AccountAir/>
+                      <SettingsAir/>
+                      <HelpAir/>
+                      <SearchAir/>
+                    </>
                   }>
                     {children}
                   </App>

@@ -43,7 +43,7 @@ export default function Page({
                     </div>
                 : null}
                 {children ?
-                    <div className={styles.content__container} style={{
+                    <div className={styles.page_content__container} style={{
                         minHeight: appBarContext.height && appBarContext.height > 0 ? `calc(100vh - ${appBarContext.height}px)` : '100%',
                         width: pageBarContext.width && pageBarContext.width > 0 ? `calc(100% - ${pageBarContext.width}px)` : '100%',
                         marginRight: pageBarContext.width && pageBarContext.width > 0 ? pageBarContext.width : 0,

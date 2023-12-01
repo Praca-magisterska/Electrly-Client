@@ -1,9 +1,9 @@
 "use client"
-import Page from "@/components/layouts/page";
+import Page from "@/components/layouts/Page";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Link from "next/link";
-import FormContent from "@/components/layouts/FormContent";
+import PageFormContent from "@/components/layouts/PageFormContent";
 
 import useUser from "@/hooks/useUser";
 
@@ -12,7 +12,7 @@ export default function Reset() {
 
     return (
         <Page>
-            <FormContent
+            <PageFormContent
                 header='Reset password'
             >
                 {userHook.stage === 0 ?
@@ -144,7 +144,7 @@ export default function Reset() {
                         </Link>
                     </>
                 }
-            </FormContent>
+            </PageFormContent>
         </Page>
     )
 }

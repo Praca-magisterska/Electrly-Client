@@ -1,4 +1,4 @@
-import styles from '../../styles/form_content.module.scss'
+import styles from '../../styles/page_form_content.module.scss'
 
 export default function FormContent({
     header,
@@ -10,17 +10,17 @@ export default function FormContent({
     footer?: React.ReactNode,
 }) {
     return (
-        <div className={styles.form_content}>
-            <div className={styles.form_content__inner}>
-                <div className={styles.form}>
-                    <div className={styles.form__inner}>
-                        <div className={styles.form__header}>
+        <div className={styles.page_form_content}>
+            <div className={styles.page_form_content__inner}>
+                <div className={styles.page_form}>
+                    <div className={styles.page_form__inner}>
+                        <div className={styles.page_form__header}>
                             {header}
                         </div>
-                        <div className={styles.form__main}>
+                        <div className={styles.page_form__main}>
                             {children}
                         </div>
-                        <div className={styles.form__footer}>
+                        <div className={styles.page_form__footer}>
                             {footer}
                         </div>
                     </div>

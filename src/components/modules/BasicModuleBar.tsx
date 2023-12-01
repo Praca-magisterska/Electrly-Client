@@ -22,13 +22,13 @@ export default function GateModuleBar() {
                 justifyContent: 'flex-start',
                 gap: 8,
             }}>
-                <ModuleBarButton href="/" label="Home">
+                <ModuleBarButton href="/" activeHrefPattern="^/$" label="Home">
                     <HomeOutlinedIcon />
                 </ModuleBarButton>
-                <ModuleBarButton href="/categories" label="Categories">
+                <ModuleBarButton href="/categories" activeHrefPattern="/categories" label="Categories">
                     <CategoryOutlinedIcon />
                 </ModuleBarButton>
-                <ModuleBarButton href="/thread" hidden={true} label="Thread">
+                <ModuleBarButton activeHrefPattern="/thread" hidden={true} label="Thread">
                     <NewspaperOutlinedIcon />
                 </ModuleBarButton>
             </div>
@@ -41,16 +41,16 @@ export default function GateModuleBar() {
                 justifyContent: 'flex-start',
                 gap: 8,
             }}>
-                <ModuleBarButton href="/signup" hidden={true} label="Sign up">
+                <ModuleBarButton href="/signup" activeHrefPattern="/signup" hidden={true} label="Sign up">
                     <PersonAddOutlinedIcon />
                 </ModuleBarButton>
-                <ModuleBarButton href="/signin" hidden={true} label="Sign in">
+                <ModuleBarButton href="/signin" activeHrefPattern="/signin" hidden={true} label="Sign in">
                     <LoginOutlinedIcon />
                 </ModuleBarButton>
-                <ModuleBarButton href="/reset" hidden={true} label="Reset password">
+                <ModuleBarButton href="/reset" activeHrefPattern="/reset" hidden={true} label="Reset password">
                     <LockResetOutlinedIcon />
                 </ModuleBarButton>
-                <ModuleBarButton href="/signout" hidden={true} label="Sign out">
+                <ModuleBarButton href="/signout" activeHrefPattern="/signout" hidden={true} label="Sign out">
                     <LogoutOutlinedIcon />
                 </ModuleBarButton>
                 <ModuleBarSizeButton />

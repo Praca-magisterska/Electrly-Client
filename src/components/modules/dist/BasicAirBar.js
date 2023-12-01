@@ -9,13 +9,24 @@ var AppBarContext_1 = require("@/context/AppBarContext");
 var AirContext_1 = require("@/context/AirContext");
 var ModuleBarContext_1 = require("@/context/ModuleBarContext");
 var PageBarContext_1 = require("@/context/PageBarContext");
+var UserContext_1 = require("@/context/UserContext");
 var AirBar_1 = require("../layouts/AirBar");
 var AirBarButton_1 = require("../elements/buttons/AirBarButton");
+var useUser_1 = require("@/hooks/useUser");
 function BasicAirBar() {
     var appBarContext = react_1.useContext(AppBarContext_1["default"]);
     var airContext = react_1.useContext(AirContext_1["default"]);
     var moduleBarContext = react_1.useContext(ModuleBarContext_1["default"]);
     var pageBarContext = react_1.useContext(PageBarContext_1["default"]);
+    var userContext = react_1.useContext(UserContext_1["default"]);
+    var userHook = useUser_1["default"]();
+    var _a = react_1.useState({ firstName: undefined }), user = _a[0], setUser = _a[1];
+    react_1.useEffect(function () {
+        userHook.doGetUser().then(function (res) {
+            setUser(res.data);
+            console.log(user);
+        });
+    }, []);
     return (React.createElement(AirBar_1["default"], null,
         React.createElement(AirBarButton_1["default"], { code: "search" },
             React.createElement(SearchOutlined_1["default"], null)),
@@ -23,7 +34,7 @@ function BasicAirBar() {
             React.createElement(HelpOutlineOutlined_1["default"], null)),
         React.createElement(AirBarButton_1["default"], { code: "settings" },
             React.createElement(SettingsOutlined_1["default"], null)),
-        React.createElement(AirBarButton_1["default"], { code: "account", label: 'Jakub' },
+        React.createElement(AirBarButton_1["default"], { code: "account", label: user.firstName },
             React.createElement(AccountCircleOutlined_1["default"], null))));
 }
 exports["default"] = BasicAirBar;

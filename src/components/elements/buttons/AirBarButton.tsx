@@ -21,7 +21,6 @@ export default function AirBarButton(
 }
 ) {
     const airContext = useContext(AirContext);
-
     const here = airContext.code === code;
 
     let classNames = [styles.air_bar_button];

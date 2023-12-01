@@ -13,7 +13,7 @@
   width: 100%;
   height: auto;
 }
-.page .page__inner .content__container {
+.page .page__inner .page_content__container {
   display: flex;
   flex-direction: column;
   width: calc(100% - 64px);

@@ -3,7 +3,7 @@ import Page from "@/components/layouts/Page";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Link from "next/link";
-import FormContent from "@/components/layouts/FormContent";
+import PageFormContent from "@/components/layouts/PageFormContent";
 
 import useUser from "@/hooks/useUser";
 
@@ -12,7 +12,7 @@ export default function Signin() {
 
     return (
         <Page>
-            <FormContent
+            <PageFormContent
                 header='Sign in'
             >
                 <TextField 
@@ -86,7 +86,7 @@ export default function Signin() {
                         </div>
                     </Link>
                 </div>
-            </FormContent>
+            </PageFormContent>
         </Page>
     )
 }

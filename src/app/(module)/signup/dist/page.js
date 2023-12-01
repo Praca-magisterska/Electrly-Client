@@ -1,16 +1,16 @@
 "use client";
 "use strict";
 exports.__esModule = true;
-var page_1 = require("@/components/layouts/page");
+var Page_1 = require("@/components/layouts/Page");
 var TextField_1 = require("@mui/material/TextField");
 var Button_1 = require("@mui/material/Button");
 var link_1 = require("next/link");
-var FormContent_1 = require("@/components/layouts/FormContent");
+var PageFormContent_1 = require("@/components/layouts/PageFormContent");
 var useUser_1 = require("@/hooks/useUser");
 function Signup() {
     var userHook = useUser_1["default"]();
-    return (React.createElement(page_1["default"], null,
-        React.createElement(FormContent_1["default"], { header: 'Sign up' }, userHook.stage === 0 ?
+    return (React.createElement(Page_1["default"], null,
+        React.createElement(PageFormContent_1["default"], { header: 'Sign up' }, userHook.stage === 0 ?
             React.createElement(React.Fragment, null,
                 React.createElement(TextField_1["default"], { id: "outlined-basic", label: "Nickname", variant: "outlined", defaultValue: userHook.nickname, onChange: function (event) { userHook.setNickname(event.target.value); }, style: {
                         width: '100%'

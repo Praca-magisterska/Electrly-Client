@@ -5,12 +5,12 @@ var Page_1 = require("@/components/layouts/Page");
 var TextField_1 = require("@mui/material/TextField");
 var Button_1 = require("@mui/material/Button");
 var link_1 = require("next/link");
-var FormContent_1 = require("@/components/layouts/FormContent");
+var PageFormContent_1 = require("@/components/layouts/PageFormContent");
 var useUser_1 = require("@/hooks/useUser");
 function Signin() {
     var userHook = useUser_1["default"]();
     return (React.createElement(Page_1["default"], null,
-        React.createElement(FormContent_1["default"], { header: 'Sign in' },
+        React.createElement(PageFormContent_1["default"], { header: 'Sign in' },
             React.createElement(TextField_1["default"], { id: "outlined-basic", label: "Email", variant: "outlined", defaultValue: userHook.email, onChange: function (event) { userHook.setEmail(event.target.value); }, style: {
                     width: '100%'
                 } }),

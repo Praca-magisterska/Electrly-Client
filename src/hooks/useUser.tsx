@@ -122,14 +122,27 @@ export default function useUser() {
         })
     }
 
+    // const doGetUser = async () => {
+    //     getUser('me')
+    //     .then((res) => {
+    //         console.log(res);
+    //         return res;
+    //     })
+    //     .catch((err) => {
+    //         return err;
+    //     })
+    // }
+
     const doGetUser = async () => {
-        getUser('me')
-        .then((res) => {
-            return res;
-        })
-        .catch((err) => {
-            return err;
-        })
+        return new Promise((resolve, reject) => {
+            getUser('me')
+            .then((response: any) => {
+                resolve(response);
+            })
+            .catch(error => {
+                reject(error);
+            });
+        });
     }
 
 

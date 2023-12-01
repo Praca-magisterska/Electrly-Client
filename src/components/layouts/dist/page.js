@@ -36,7 +36,7 @@ function Page(_a) {
                     } }, bar)
                 : null,
             children ?
-                React.createElement("div", { className: page_module_scss_1["default"].content__container, style: {
+                React.createElement("div", { className: page_module_scss_1["default"].page_content__container, style: {
                         minHeight: appBarContext.height && appBarContext.height > 0 ? "calc(100vh - " + appBarContext.height + "px)" : '100%',
                         width: pageBarContext.width && pageBarContext.width > 0 ? "calc(100% - " + pageBarContext.width + "px)" : '100%',
                         marginRight: pageBarContext.width && pageBarContext.width > 0 ? pageBarContext.width : 0

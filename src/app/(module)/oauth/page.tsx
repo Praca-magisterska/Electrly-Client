@@ -1,13 +1,13 @@
-import Content from "@/components/layouts/content";
-import Page from "@/components/layouts/page";
+import Content from "@/components/layouts/PageContent";
+import Page from "@/components/layouts/Page";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import FormContent from "@/components/layouts/FormContent";
+import PageFormContent from "@/components/layouts/PageFormContent";
 
 export default function Signin() {
     return (
         <Page>
-            <FormContent
+            <PageFormContent
                 header='Grant Access'
             >
                 <div style={{
@@ -56,7 +56,7 @@ export default function Signin() {
                     borderRadius: 8,
                     color: '#ffffff',
                 }}>Allow</Button>
-            </FormContent>
+            </PageFormContent>
         </Page>
     )
 }

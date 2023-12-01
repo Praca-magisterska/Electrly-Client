@@ -1,4 +1,4 @@
-import Module from "@/components/layouts/module"
+import Module from "@/components/layouts/Module"
 import ModuleBar from "@/components/layouts/ModuleBar"
 import GateModuleBar from "@/components/modules/BasicModuleBar"
 

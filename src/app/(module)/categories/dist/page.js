@@ -1,43 +1,49 @@
 "use strict";
 exports.__esModule = true;
-var Content_1 = require("@/components/layouts/Content");
+var PageContent_1 = require("@/components/layouts/PageContent");
 var Page_1 = require("@/components/layouts/Page");
-var ContentSection_1 = require("@/components/layouts/ContentSection");
+var PageContentSection_1 = require("@/components/layouts/PageContentSection");
 var ThreadCategoryCard_1 = require("@/components/elements/cards/ThreadCategoryCard");
 function Signin() {
     var trendingThreads = [
         {
+            id: 0,
             imageUrl: "https://images.unsplash.com/photo-1473308822086-710304d7d30c?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             name: "Serwis Komputery"
         },
         {
+            id: 1,
             imageUrl: "https://images.unsplash.com/photo-1543489816-c87b0f5f7dd4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             name: "DIY Zrób to sam"
         },
         {
+            id: 2,
             imageUrl: "https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             name: "Ogłoszenia"
         },
         {
+            id: 3,
             imageUrl: "https://images.unsplash.com/photo-1616243850909-f010afe8de3a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             name: "Poradniki"
         },
         {
+            id: 4,
             imageUrl: "https://images.unsplash.com/photo-1473308822086-710304d7d30c?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             name: "Programowanie"
         },
         {
+            id: 5,
             imageUrl: "https://images.unsplash.com/photo-1543489816-c87b0f5f7dd4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             name: "Automatyka Przemysłowa"
         },
         {
+            id: 6,
             imageUrl: "https://images.unsplash.com/photo-1473308822086-710304d7d30c?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             name: "Audio i Akustyka"
         }
     ];
     return (React.createElement(Page_1["default"], null,
-        React.createElement(Content_1["default"], { header: React.createElement("div", null), footer: React.createElement("div", null) },
-            React.createElement(ContentSection_1["default"], { title: "Categories" }, trendingThreads.map(function (thread, index) { return (React.createElement(ThreadCategoryCard_1["default"], { key: index, category: thread })); })),
-            React.createElement(ContentSection_1["default"], { title: "Category threads" }))));
+        React.createElement(PageContent_1["default"], { header: React.createElement("div", null), footer: React.createElement("div", null) },
+            React.createElement(PageContentSection_1["default"], { title: "Categories" }, trendingThreads.map(function (thread) { return (React.createElement(ThreadCategoryCard_1["default"], { key: thread.id, category: thread })); })))));
 }
 exports["default"] = Signin;

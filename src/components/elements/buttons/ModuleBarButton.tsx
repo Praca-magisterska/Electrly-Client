@@ -10,13 +10,15 @@ export default function ModuleBarButton(
 {
     label,
     href,
+    activeHrefPattern,
     hidden = false,
     hiddenFromSignedIn = false,
     hiddenAfterSignedIn = false,
     children
 }: {
     label?: string,
-    href: string,
+    href?: string,
+    activeHrefPattern: string,
     hidden?: boolean,
     hiddenFromSignedIn?: boolean,
     hiddenAfterSignedIn?: boolean,
@@ -25,7 +27,9 @@ export default function ModuleBarButton(
     const moduleBarContext = useContext(ModuleBarContext);
 
     const pathname = usePathname();
-    const here = pathname === href;
+    let here = pathname.match(activeHrefPattern);
+
+    if(!href) href = pathname;
 
     let classNames = [styles.module_bar_button__icon];
     if (here) classNames.push(styles.module_bar_button__icon___active);

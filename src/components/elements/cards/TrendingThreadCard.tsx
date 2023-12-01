@@ -1,10 +1,12 @@
+import Link from "next/link"
+
 export default function TrendingThreadCard({
     thread
 }: {
     thread: any
 }) {
     return (
-        <div style={{
+        <Link href={'/threads/'+thread.id} style={{
             width: 226,
             height: 206,
             display: 'flex',
@@ -41,6 +43,6 @@ export default function TrendingThreadCard({
                     Posted by {thread.user.nickname}
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }

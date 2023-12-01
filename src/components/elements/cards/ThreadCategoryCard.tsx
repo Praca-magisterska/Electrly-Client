@@ -1,10 +1,12 @@
+import Link from "next/link"
+
 export default function TrendingThreadCard({
     category
 }: {
     category: any
 }) {
     return (
-        <div style={{
+        <Link href={'/categories/'+category.id} style={{
             width: 200,
             height: 160,
             display: 'flex',
@@ -36,6 +38,6 @@ export default function TrendingThreadCard({
                     {category.name}
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
