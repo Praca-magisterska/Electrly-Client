@@ -1,7 +1,6 @@
 "use strict";
 exports.__esModule = true;
 var AppBar_1 = require("../layouts/AppBar");
-var image_1 = require("next/image");
 var react_1 = require("react");
 var AppBarContext_1 = require("@/context/AppBarContext");
 var AirContext_1 = require("@/context/AirContext");
@@ -33,12 +32,14 @@ function BasicAppBar() {
                     height: 48,
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'center'
-                } },
-                React.createElement(image_1["default"], { src: "/logo.png", width: 24, height: 24, alt: "Logo" })),
+                    justifyContent: 'center',
+                    fontWeight: 800,
+                    fontSize: 30,
+                    color: '#5448C8'
+                } }, "E!"),
             React.createElement("div", { style: {
                     fontSize: 16,
                     fontWeight: 600
-                } }, "Forest Gate")), right: React.createElement(BasicAirBar_1["default"], null) }));
+                } }, "Electrly")), right: React.createElement(BasicAirBar_1["default"], null) }));
 }
 exports["default"] = BasicAppBar;

@@ -1,0 +1,34 @@
+.content_section {
+    width: 100%;
+
+    .content_section__inner {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 16px;
+
+        .content_section__title {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .content_section__main {
+            // width: 100%;
+            // display: flex;
+            // flex-direction: column;
+            // flex-wrap: wrap;
+            // align-items: flex-start;
+            // justify-content: flex-start;
+            // gap: 16px;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 32px;
+        }
+
+    }
+}

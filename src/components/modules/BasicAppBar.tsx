@@ -45,19 +45,23 @@ export default function BasicAppBar() {
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
+                            fontWeight: 800,
+                            fontSize: 30,
+                            color: '#5448C8'
                         }}>
-                            <Image
+                            {/* <Image
                                 src="/logo.png"
                                 width={24}
                                 height={24}
                                 alt="Logo"
-                                />
+                                /> */}
+                                E!
                         </div>
                         <div style={{
                             fontSize: 16,
                             fontWeight: 600,
                         }}>
-                            Forest Gate
+                            Electrly
                         </div>
                     </div>
                 }

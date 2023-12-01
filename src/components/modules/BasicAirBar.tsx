@@ -1,6 +1,9 @@
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 import AppsOutlinedIcon from '@mui/icons-material/AppsOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
 import { useContext } from "react";
 import AppBarContext from "@/context/AppBarContext";
@@ -19,11 +22,14 @@ export default function BasicAirBar() {
 
     return (
         <AirBar>
-            <AirBarButton code="notifications" hiddenFromSignedIn={true}>
-                <NotificationsOutlinedIcon />
+            <AirBarButton code="search">
+                <SearchOutlinedIcon />
             </AirBarButton>
-            <AirBarButton code="apps">
-                <AppsOutlinedIcon />
+            <AirBarButton code="help">
+                <HelpOutlineOutlinedIcon />
+            </AirBarButton>
+            <AirBarButton code="settings">
+                <SettingsOutlinedIcon />
             </AirBarButton>
             <AirBarButton code="account" label='Jakub'>
                 <AccountCircleOutlinedIcon />

@@ -20,15 +20,15 @@
 }
 
 .air_bar_button:hover {
-  background-color: #1976d20a;
+  background-color: #210aee0a;
 }
 
 .air_bar_button:active {
-  background-color: #CDDEFF;
+  background-color: #cbc7ee;
 }
 
 .air_bar_button___active {
-  background-color: #CDDEFF;
+  background-color: #cbc7ee;
 }
 
 .air_bar_button__inner {

@@ -5,6 +5,8 @@ import LoginOutlinedIcon from '@mui/icons-material/LoginOutlined';
 import PersonAddOutlinedIcon from '@mui/icons-material/PersonAddOutlined';
 import KeyOutlinedIcon from '@mui/icons-material/KeyOutlined';
 import ModuleBarButton from "../elements/ModuleBarButton";
+import CategoryOutlinedIcon from '@mui/icons-material/CategoryOutlined';
+import NewspaperOutlinedIcon from '@mui/icons-material/NewspaperOutlined';
 
 import LockResetOutlinedIcon from '@mui/icons-material/LockResetOutlined';
 import ModuleBarSizeButton from "../elements/ModuleBarSizeButton";
@@ -20,20 +22,14 @@ export default function GateModuleBar() {
                 justifyContent: 'flex-start',
                 gap: 8,
             }}>
-                <ModuleBarButton href="/" hiddenFromSignedIn={true} label="Home">
+                <ModuleBarButton href="/" label="Home">
                     <HomeOutlinedIcon />
                 </ModuleBarButton>
-                <ModuleBarButton href="/signup" hiddenAfterSignedIn={true} label="Sign up">
-                    <PersonAddOutlinedIcon />
+                <ModuleBarButton href="/categories" label="Categories">
+                    <CategoryOutlinedIcon />
                 </ModuleBarButton>
-                <ModuleBarButton href="/signin" hiddenAfterSignedIn={true} label="Sign in">
-                    <LoginOutlinedIcon />
-                </ModuleBarButton>
-                <ModuleBarButton href="/reset" hiddenAfterSignedIn={true} label="Reset password">
-                    <LockResetOutlinedIcon />
-                </ModuleBarButton>
-                <ModuleBarButton href="/oauth" hidden={true} label="Grant access">
-                    <KeyOutlinedIcon />
+                <ModuleBarButton href="/thread" hidden={true} label="Thread">
+                    <NewspaperOutlinedIcon />
                 </ModuleBarButton>
             </div>
         }
@@ -45,7 +41,16 @@ export default function GateModuleBar() {
                 justifyContent: 'flex-start',
                 gap: 8,
             }}>
-                <ModuleBarButton href="/signout" hiddenFromSignedIn={true} label="Sign out">
+                <ModuleBarButton href="/signup" hidden={true} label="Sign up">
+                    <PersonAddOutlinedIcon />
+                </ModuleBarButton>
+                <ModuleBarButton href="/signin" hidden={true} label="Sign in">
+                    <LoginOutlinedIcon />
+                </ModuleBarButton>
+                <ModuleBarButton href="/reset" hidden={true} label="Reset password">
+                    <LockResetOutlinedIcon />
+                </ModuleBarButton>
+                <ModuleBarButton href="/signout" hidden={true} label="Sign out">
                     <LogoutOutlinedIcon />
                 </ModuleBarButton>
                 <ModuleBarSizeButton />
