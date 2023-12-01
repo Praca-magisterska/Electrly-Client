@@ -4,12 +4,12 @@ import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import LoginOutlinedIcon from '@mui/icons-material/LoginOutlined';
 import PersonAddOutlinedIcon from '@mui/icons-material/PersonAddOutlined';
 import KeyOutlinedIcon from '@mui/icons-material/KeyOutlined';
-import ModuleBarButton from "../elements/ModuleBarButton";
+import ModuleBarButton from "../elements/buttons/ModuleBarButton";
 import CategoryOutlinedIcon from '@mui/icons-material/CategoryOutlined';
 import NewspaperOutlinedIcon from '@mui/icons-material/NewspaperOutlined';
 
 import LockResetOutlinedIcon from '@mui/icons-material/LockResetOutlined';
-import ModuleBarSizeButton from "../elements/ModuleBarSizeButton";
+import ModuleBarSizeButton from "../elements/buttons/ModuleBarSizeButton";
 
 export default function GateModuleBar() {
   return  (

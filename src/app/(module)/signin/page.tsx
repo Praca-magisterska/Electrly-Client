@@ -1,5 +1,5 @@
 "use client"
-import Page from "@/components/layouts/page";
+import Page from "@/components/layouts/Page";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Link from "next/link";

@@ -5,11 +5,11 @@ var HomeOutlined_1 = require("@mui/icons-material/HomeOutlined");
 var LogoutOutlined_1 = require("@mui/icons-material/LogoutOutlined");
 var LoginOutlined_1 = require("@mui/icons-material/LoginOutlined");
 var PersonAddOutlined_1 = require("@mui/icons-material/PersonAddOutlined");
-var ModuleBarButton_1 = require("../elements/ModuleBarButton");
+var ModuleBarButton_1 = require("../elements/buttons/ModuleBarButton");
 var CategoryOutlined_1 = require("@mui/icons-material/CategoryOutlined");
 var NewspaperOutlined_1 = require("@mui/icons-material/NewspaperOutlined");
 var LockResetOutlined_1 = require("@mui/icons-material/LockResetOutlined");
-var ModuleBarSizeButton_1 = require("../elements/ModuleBarSizeButton");
+var ModuleBarSizeButton_1 = require("../elements/buttons/ModuleBarSizeButton");
 function GateModuleBar() {
     return (React.createElement(ModuleBar_1["default"], { top: React.createElement("div", { style: {
                 display: 'flex',

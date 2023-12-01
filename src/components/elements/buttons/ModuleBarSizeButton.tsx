@@ -1,5 +1,5 @@
 'use client'
-import styles from '../../styles/module_bar.module.scss'
+import styles from '../../../styles/module_bar.module.scss'
 import { useEffect, useState, useContext } from 'react'
 import ModuleBarContext from '@/context/ModuleBarContext';
 

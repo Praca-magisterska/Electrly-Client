@@ -12,7 +12,7 @@ export default function TrendingThread({
             justifyContent: 'center',
             borderRadius: 8,
             background: 'url('+thread.imageUrl+')',
-            backgroundColor: 'grey',
+            backgroundColor: '#555555',
             backgroundBlendMode: 'multiply',
             backgroundSize: 'cover',
             backgroundPosition: 'center',

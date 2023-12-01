@@ -39,8 +39,7 @@ function Signin() {
     ];
     return (React.createElement(Page_1["default"], null,
         React.createElement(Content_1["default"], { header: React.createElement("div", null), footer: React.createElement("div", null) },
-            React.createElement(ContentSection_1["default"], { title: "Trending Today" }, trendingThreads.map(function (thread, index) { return (React.createElement(TrendingThread_1["default"], { key: index, thread: thread })); })),
-            React.createElement(ContentSection_1["default"], { title: "Nav", showTitle: false }),
-            React.createElement(ContentSection_1["default"], { title: "Threads & Discussion" }))));
+            React.createElement(ContentSection_1["default"], { title: "Categories" }, trendingThreads.map(function (thread, index) { return (React.createElement(TrendingThread_1["default"], { key: index, thread: thread })); })),
+            React.createElement(ContentSection_1["default"], { title: "Category threads" }))));
 }
 exports["default"] = Signin;

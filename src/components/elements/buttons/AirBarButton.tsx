@@ -1,5 +1,5 @@
 'use client'
-import styles from '../../styles/air_bar.module.scss'
+import styles from '../../../styles/air_bar.module.scss'
 import { useEffect, useState, useContext } from 'react'
 import AirContext from '@/context/AirContext';
 

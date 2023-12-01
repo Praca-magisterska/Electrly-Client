@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import styles from '../../styles/module_bar.module.scss'
+import styles from '../../../styles/module_bar.module.scss'
 import { useEffect, useState, useContext } from 'react'
 import ModuleBarContext from '@/context/ModuleBarContext';
 

@@ -10,7 +10,7 @@ var AirContext_1 = require("@/context/AirContext");
 var ModuleBarContext_1 = require("@/context/ModuleBarContext");
 var PageBarContext_1 = require("@/context/PageBarContext");
 var AirBar_1 = require("../layouts/AirBar");
-var AirBarButton_1 = require("../elements/AirBarButton");
+var AirBarButton_1 = require("../elements/buttons/AirBarButton");
 function BasicAirBar() {
     var appBarContext = react_1.useContext(AppBarContext_1["default"]);
     var airContext = react_1.useContext(AirContext_1["default"]);

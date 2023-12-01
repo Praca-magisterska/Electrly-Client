@@ -57,15 +57,12 @@ export default function Signin() {
                     {/* footer */}
                 </div>
             }>
-            <ContentSection title="Trending Today">
+            <ContentSection title="Categories">
               {trendingThreads.map((thread, index) => (
                 <TrendingThread key={index} thread={thread} />
               ))}
             </ContentSection>
-            <ContentSection title="Nav" showTitle={false}>
-
-            </ContentSection>
-            <ContentSection title="Threads & Discussion">
+            <ContentSection title="Category threads">
               
             </ContentSection>
           </Content>

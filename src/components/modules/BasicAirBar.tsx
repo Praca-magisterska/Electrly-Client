@@ -12,7 +12,7 @@ import ModuleBarContext from "@/context/ModuleBarContext";
 import PageBarContext from "@/context/PageBarContext";
 
 import AirBar from "../layouts/AirBar";
-import AirBarButton from '../elements/AirBarButton';
+import AirBarButton from '../elements/buttons/AirBarButton';
 
 export default function BasicAirBar() {
     const appBarContext = useContext(AppBarContext);
