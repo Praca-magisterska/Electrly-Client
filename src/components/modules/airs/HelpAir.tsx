@@ -2,6 +2,7 @@ import Air from '@/components/layouts/Air';
 import AirContent from "@/components/layouts/AirContent";
 import AirContentSection from "@/components/layouts/AirContentSection";
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
+import Link from 'next/link';
 
 
 function HelpArticleCard({
@@ -10,7 +11,7 @@ function HelpArticleCard({
     article: any
 }) {
     return (
-        <div style={{
+        <Link href={'/answers/'+article.id} style={{
             display: "flex",
             flexDirection: "row",
             gap: 8
@@ -39,7 +40,7 @@ function HelpArticleCard({
             }}>
                 {article.title}
             </div>
-        </div>
+        </Link>
     )
 }
 
@@ -51,56 +52,67 @@ export default function HelpAir() {
                 <AirContentSection title="Popular resources">
                     <HelpArticleCard
                         article={{
-                        title: 'Dlaczego nie mogę się zalogować?',
+                            id: 0,
+                            title: 'Dlaczego nie mogę się zalogować?',
                         }}
                     />
                     <HelpArticleCard
                         article={{
+                            id: 1,
                         title: 'Dlaczego w ogóle muszę się rejestrować?',
                         }}
                     />
                     <HelpArticleCard
                         article={{
+                            id: 2,
                         title: 'Dlaczego wciąż jestem wylogowywany?',
                         }}
                     />
                     <HelpArticleCard
                         article={{
+                            id: 3,
                         title: 'Mojego języka nie ma na liście!',
                         }}
                     />
                     <HelpArticleCard
                         article={{
+                            id: 4,
                         title: 'Jak mogę zapobiec wyświetlaniu mojej ksywki na liście obecnych użytkowników?',
                         }}
                     />
                     <HelpArticleCard
                         article={{
+                            id: 5,
                         title: 'Zgubiłem moje hasło!',
                         }}
                     />
                     <HelpArticleCard
                         article={{
+                            id: 6,
                         title: 'Zarejestrowałem się, ale nie mogę się zalogować!',
                         }}
                     />
                     <HelpArticleCard
                         article={{
+                            id: 7,
                         title: 'Rejestrowałem się kiedyś, ale nie mogę się już logować!',
                         }}
                     />
                     <HelpArticleCard
                         article={{
+                            id: 8,
                         title: 'Jak mogę zmienić swoje ustawienia?',
                         }}
                     />
                     <HelpArticleCard
                         article={{
+                            id: 9,
                         title: 'Zmieniłem strefę czasową ale czasy są nadal nieprawidłowe!',
                         }}
                     />
                     <HelpArticleCard
                         article={{
+                            id: 10,
                         title: 'Jak mogę napisać temat na forum?',
                         }}
                     />

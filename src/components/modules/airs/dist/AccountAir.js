@@ -7,7 +7,9 @@ var AirContentSection_1 = require("@/components/layouts/AirContentSection");
 var UserContext_1 = require("@/context/UserContext");
 var link_1 = require("next/link");
 var AirContext_1 = require("@/context/AirContext");
+var react_i18next_1 = require("react-i18next");
 function AccountAir() {
+    var t = react_i18next_1.useTranslation().t;
     var airContext = react_1.useContext(AirContext_1["default"]);
     var userContext = react_1.useContext(UserContext_1["default"]);
     return (React.createElement(Air_1["default"], { code: 'account' },
@@ -58,7 +60,7 @@ function AccountAir() {
                             borderRadius: 8,
                             backgroundColor: '#5448C8',
                             color: "white"
-                        } }, "Manage account")),
+                        } }, t('Manage account'))),
                 React.createElement("div", { style: {
                         display: "flex",
                         flexDirection: "row",
@@ -77,7 +79,7 @@ function AccountAir() {
                             borderRadius: 8,
                             border: '2px solid #5448C8',
                             color: "black"
-                        } }, "Sign out"))),
+                        } }, t('Sign out')))),
             React.createElement(AirContentSection_1["default"], { title: "Details", showTitle: false, show: !userContext.isSignedOn },
                 React.createElement("div", { style: {
                         display: "flex",
@@ -103,7 +105,7 @@ function AccountAir() {
                             borderRadius: 8,
                             backgroundColor: '#5448C8',
                             color: "white"
-                        } }, "Sign in")),
+                        } }, t('Sign in'))),
                 React.createElement("div", { style: {
                         display: "flex",
                         flexDirection: "row",
@@ -136,7 +138,7 @@ function AccountAir() {
                             borderRadius: 8,
                             border: '2px solid #5448C8',
                             color: "black"
-                        } }, "Reset password"))),
-            React.createElement(AirContentSection_1["default"], { title: "Your threads" }))));
+                        } }, t('Reset password')))),
+            React.createElement(AirContentSection_1["default"], { title: t("Your threads") }))));
 }
 exports["default"] = AccountAir;

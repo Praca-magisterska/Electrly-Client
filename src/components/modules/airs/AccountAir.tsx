@@ -6,9 +6,11 @@ import AirContentSection from "@/components/layouts/AirContentSection";
 import UserContext from "@/context/UserContext";
 import Link from "next/link";
 import AirContext from "@/context/AirContext";
+import { useTranslation } from "react-i18next";
 
 
 export default function AccountAir() {
+    const { t } = useTranslation();
     const airContext = useContext(AirContext);
     const userContext = useContext(UserContext);
     
@@ -24,13 +26,13 @@ export default function AccountAir() {
                             width: '100%'
                         }}>
                             <div style={{
-                            width: 100,
-                            height: 100,
-                            borderRadius: 20,
-                            background: 'url('+userContext.imageUrl+')',
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                        }}/>
+                                width: 100,
+                                height: 100,
+                                borderRadius: 20,
+                                background: 'url('+userContext.imageUrl+')',
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                            }}/>
                         </div>
                     :null}
                     <div style={{
@@ -62,7 +64,7 @@ export default function AccountAir() {
                             backgroundColor: '#5448C8',
                             color: "white"
                         }}>
-                            Manage account
+                            {t('Manage account')}
                         </button>
                     </div>
                     <div style={{
@@ -84,7 +86,7 @@ export default function AccountAir() {
                             border: '2px solid #5448C8',
                             color: "black"
                         }}>
-                            Sign out
+                            {t('Sign out')}
                         </Link>
                     </div>
                 </AirContentSection>
@@ -114,7 +116,7 @@ export default function AccountAir() {
                             backgroundColor: '#5448C8',
                             color: "white"
                         }}>
-                            Sign in
+                            {t('Sign in')}
                         </Link>
                     </div>
                     <div style={{
@@ -153,11 +155,11 @@ export default function AccountAir() {
                             color: "black",
 
                         }}>
-                            Reset password
+                            {t('Reset password')}
                         </Link>
                     </div>
                 </AirContentSection>
-                <AirContentSection title="Your threads">
+                <AirContentSection title={t("Your threads")}>
                     
                 </AirContentSection>
             </AirContent>
