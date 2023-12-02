@@ -57,6 +57,7 @@ exports.getUser = function (id) { return __awaiter(void 0, void 0, void 0, funct
         return [2 /*return*/, new Promise(function (resolve, reject) {
                 client.get('/u/users/' + id)
                     .then(function (response) {
+                    console.log(response);
                     resolve(response);
                 })["catch"](function (error) {
                     reject(error);

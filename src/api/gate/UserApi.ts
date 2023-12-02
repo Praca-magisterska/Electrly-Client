@@ -18,6 +18,7 @@ export const getUser = async (id: string) => {
     return new Promise((resolve, reject) => {
         client.get('/u/users/' + id)
         .then((response: any) => {
+            console.log(response);
             resolve(response);
         })
         .catch(error => {

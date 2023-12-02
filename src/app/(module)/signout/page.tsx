@@ -3,10 +3,10 @@ import Page from "@/components/layouts/Page";
 import Button from '@mui/material/Button';
 import PageFormContent from "@/components/layouts/PageFormContent";
 
-import useUser from "@/hooks/useUser";
+import useAuth from "@/hooks/useAuth";
 
 export default function Signin() {
-    const userHook = useUser();
+    const authHook = useAuth();
 
     return (
         <Page>
@@ -30,11 +30,11 @@ export default function Signin() {
                 </div>
                 <Button
                     variant="contained"
-                    onClick={() => { userHook.doRevokeToken(); }}
+                    onClick={() => { authHook.doRevokeToken(); }}
                     style={{
                         width: '100%',
                         height: 48,
-                        backgroundColor: '#2B318A',
+                        backgroundColor: '#5448C8',
                         borderRadius: 8,
                         color: '#ffffff',
                     }}>Sign out</Button>

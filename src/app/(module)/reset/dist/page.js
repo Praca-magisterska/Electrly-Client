@@ -6,19 +6,19 @@ var TextField_1 = require("@mui/material/TextField");
 var Button_1 = require("@mui/material/Button");
 var link_1 = require("next/link");
 var PageFormContent_1 = require("@/components/layouts/PageFormContent");
-var useUser_1 = require("@/hooks/useUser");
+var useAuth_1 = require("@/hooks/useAuth");
 function Reset() {
-    var userHook = useUser_1["default"]();
+    var authHook = useAuth_1["default"]();
     return (React.createElement(Page_1["default"], null,
-        React.createElement(PageFormContent_1["default"], { header: 'Reset password' }, userHook.stage === 0 ?
+        React.createElement(PageFormContent_1["default"], { header: 'Reset password' }, authHook.stage === 0 ?
             React.createElement(React.Fragment, null,
-                React.createElement(TextField_1["default"], { id: "outlined-basic", label: "Email", variant: "outlined", defaultValue: userHook.email, onChange: function (event) { userHook.setEmail(event.target.value); }, style: {
+                React.createElement(TextField_1["default"], { id: "outlined-basic", label: "Email", variant: "outlined", defaultValue: authHook.email, onChange: function (event) { authHook.setEmail(event.target.value); }, style: {
                         width: '100%'
                     } }),
-                React.createElement(Button_1["default"], { variant: "contained", onClick: function () { userHook.doCreateUserPasswordCode(); }, style: {
+                React.createElement(Button_1["default"], { variant: "contained", onClick: function () { authHook.doCreateUserPasswordCode(); }, style: {
                         width: '100%',
                         height: 48,
-                        backgroundColor: '#2B318A',
+                        backgroundColor: '#5448C8',
                         borderRadius: 8,
                         color: '#ffffff'
                     } }, "Reset"),
@@ -58,22 +58,22 @@ function Reset() {
                                 fontWeight: 600,
                                 color: '#2B318A'
                             } }, "Sign up"))))
-            : userHook.stage === 1 ?
+            : authHook.stage === 1 ?
                 React.createElement(React.Fragment, null,
-                    React.createElement(TextField_1["default"], { id: "outlined-basic", label: "Code", variant: "outlined", defaultValue: userHook.passwordCode, onChange: function (event) { userHook.setPasswordCode(event.target.value); }, style: {
+                    React.createElement(TextField_1["default"], { id: "outlined-basic", label: "Code", variant: "outlined", defaultValue: authHook.passwordCode, onChange: function (event) { authHook.setPasswordCode(event.target.value); }, style: {
                             width: '100%'
                         } }),
-                    React.createElement(TextField_1["default"], { id: "outlined-basic", label: "Password", variant: "outlined", defaultValue: userHook.password, onChange: function (event) { userHook.setPassword(event.target.value); }, style: {
+                    React.createElement(TextField_1["default"], { id: "outlined-basic", label: "Password", variant: "outlined", defaultValue: authHook.password, onChange: function (event) { authHook.setPassword(event.target.value); }, style: {
                             width: '100%'
                         } }),
-                    React.createElement(Button_1["default"], { variant: "contained", onClick: function () { userHook.doCreateUserPassword(); }, style: {
+                    React.createElement(Button_1["default"], { variant: "contained", onClick: function () { authHook.doCreateUserPassword(); }, style: {
                             width: '100%',
                             height: 48,
-                            backgroundColor: '#2B318A',
+                            backgroundColor: '#5448C8',
                             borderRadius: 8,
                             color: '#ffffff'
                         } }, "Sign up"))
-                : userHook.stage === 2 &&
+                : authHook.stage === 2 &&
                     React.createElement(React.Fragment, null,
                         React.createElement("div", { style: {
                                 fontSize: 12,
@@ -90,9 +90,9 @@ function Reset() {
                             React.createElement(Button_1["default"], { variant: "contained", style: {
                                     width: '100%',
                                     height: 48,
-                                    backgroundColor: '#2B318A',
+                                    backgroundColor: '#5448C8',
                                     borderRadius: 8,
                                     color: '#ffffff'
-                                } }, "Sign up"))))));
+                                } }, "Sign in"))))));
 }
 exports["default"] = Reset;

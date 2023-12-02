@@ -14,6 +14,7 @@
   font-weight: bold;
 }
 .air_content_section .air_content_section__inner .air_content_section__main {
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

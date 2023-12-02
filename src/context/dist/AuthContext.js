@@ -2,9 +2,7 @@
 "use strict";
 exports.__esModule = true;
 var react_1 = require("react");
-var UserContext = react_1.createContext({
-    isSignedOn: false,
-    setIsSignedOn: function (isSignedOn) { },
+var AuthContext = react_1.createContext({
     nickname: '',
     setNickname: function (nickname) { },
     firstName: '',
@@ -23,12 +21,18 @@ var UserContext = react_1.createContext({
     setZoneInfo: function (zoneInfo) { },
     locale: '',
     setLocale: function (locale) { },
-    imageUrl: '',
-    setImageUrl: function (imageUrl) { },
-    language: '',
-    setLanguage: function (language) { },
-    theme: '',
-    setTheme: function (theme) { },
+    passwordCode: '',
+    setPasswordCode: function (passwordCode) { },
+    password: '',
+    setPassword: function (password) { },
+    stage: 0,
+    setStage: function (signUpStage) { },
+    doCreateUser: function () { },
+    doCreateUserPasswordCode: function () { },
+    doCreateUserPassword: function () { },
+    doAuthorize: function () { },
+    doRefreshToken: function () { },
+    doRevokeToken: function () { },
     doGetUser: function () { }
 });
-exports["default"] = UserContext;
+exports["default"] = AuthContext;

@@ -4,7 +4,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import PageFormContent from "@/components/layouts/PageFormContent";
 
-export default function Signin() {
+export default function OAuth() {
     return (
         <Page>
             <PageFormContent

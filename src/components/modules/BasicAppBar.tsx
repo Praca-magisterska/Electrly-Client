@@ -1,35 +1,7 @@
 import AppBar from "../layouts/AppBar";
-import Image from 'next/image'
-import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
-import AppsOutlinedIcon from '@mui/icons-material/AppsOutlined';
-import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
-
-import { useContext } from "react";
-import AppBarContext from "@/context/AppBarContext";
-import AirContext from "@/context/AirContext";
-import ModuleBarContext from "@/context/ModuleBarContext";
-import PageBarContext from "@/context/PageBarContext";
-
-import { toast } from 'react-toastify';
-import AirBar from "../layouts/AirBar";
 import BasicAirBar from "./BasicAirBar";
 
 export default function BasicAppBar() {
-    const appBarContext = useContext(AppBarContext);
-    const airContext = useContext(AirContext);
-    const moduleBarContext = useContext(ModuleBarContext);
-    const pageBarContext = useContext(PageBarContext);
-
-    // toast.success('🦄 Wow so easy!', {
-    //     position: "top-center",
-    //     autoClose: 5000,
-    //     hideProgressBar: false,
-    //     closeOnClick: true,
-    //     pauseOnHover: true,
-    //     draggable: true,
-    //     progress: undefined,
-    //     theme: "light",
-    //     });
 
     return (
         <AppBar

@@ -5,10 +5,10 @@ import Button from '@mui/material/Button';
 import Link from "next/link";
 import PageFormContent from "@/components/layouts/PageFormContent";
 
-import useUser from "@/hooks/useUser";
+import useAuth from "@/hooks/useAuth";
 
 export default function Signin() {
-    const userHook = useUser();
+    const authHook = useAuth();
 
     return (
         <Page>
@@ -19,8 +19,8 @@ export default function Signin() {
                     id="outlined-basic" 
                     label="Email" 
                     variant="outlined"
-                    defaultValue={userHook.email} 
-                    onChange={(event) => { userHook.setEmail(event.target.value) }} 
+                    defaultValue={authHook.email} 
+                    onChange={(event) => { authHook.setEmail(event.target.value) }} 
                     style={{
                         width: '100%',
                     }}/>
@@ -29,8 +29,8 @@ export default function Signin() {
                     label="Password" 
                     variant="outlined" 
                     type="password"
-                    defaultValue={userHook.password} 
-                    onChange={(event) => { userHook.setPassword(event.target.value) }} 
+                    defaultValue={authHook.password} 
+                    onChange={(event) => { authHook.setPassword(event.target.value) }} 
                     style={{
                         width: '100%',
                     }}/>
@@ -54,11 +54,11 @@ export default function Signin() {
                 </div>
                 <Button
                     variant="contained"
-                    onClick={() => { userHook.doAuthorize(); }}
+                    onClick={() => { authHook.doAuthorize(); }}
                     style={{
                         width: '100%',
                         height: 48,
-                        backgroundColor: '#2B318A',
+                        backgroundColor: '#5448C8',
                         borderRadius: 8,
                         color: '#ffffff',
                     }}>Sign in</Button>

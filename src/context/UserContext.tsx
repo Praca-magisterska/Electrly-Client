@@ -2,6 +2,8 @@
 import { createContext, useContext, useState } from 'react';
 
 const UserContext = createContext({
+    isSignedOn: false,
+    setIsSignedOn: (isSignedOn: boolean) => { },
     nickname: '',
     setNickname: (nickname: string) => { },
     firstName: '',
@@ -20,21 +22,13 @@ const UserContext = createContext({
     setZoneInfo: (zoneInfo: string) => { },
     locale: '',
     setLocale: (locale: string) => { },
+    imageUrl: '',
+    setImageUrl: (imageUrl: string) => { },
+    language: '',
+    setLanguage: (language: string) => { },
+    theme: '',
+    setTheme: (theme: string) => { },
 
-    passwordCode: '',
-    setPasswordCode: (passwordCode: string) => { },
-    password: '',
-    setPassword: (password: string) => { },
-
-    stage: 0,
-    setStage: (signUpStage: number) => { },
-
-    doCreateUser: () => { },
-    doCreateUserPasswordCode: () => { },
-    doCreateUserPassword: () => { },
-    doAuthorize: () => { },
-    doRefreshToken: () => { },
-    doRevokeToken: () => { },
     doGetUser: () => { },
 });
 

@@ -5,24 +5,24 @@ import Button from '@mui/material/Button';
 import Link from "next/link";
 import PageFormContent from "@/components/layouts/PageFormContent";
 
-import useUser from "@/hooks/useUser";
+import useAuth from "@/hooks/useAuth";
 
 export default function Signup() {
-    const userHook = useUser();
+    const authHook = useAuth();
 
     return (
         <Page>
             <PageFormContent
                 header='Sign up'
             >
-                {userHook.stage === 0 ?
+                {authHook.stage === 0 ?
                     <>
                         <TextField 
                             id="outlined-basic" 
                             label="Nickname" 
                             variant="outlined" 
-                            defaultValue={userHook.nickname} 
-                            onChange={(event) => { userHook.setNickname(event.target.value) }} 
+                            defaultValue={authHook.nickname} 
+                            onChange={(event) => { authHook.setNickname(event.target.value) }} 
                             style={{
                                 width: '100%',
                             }}/>
@@ -30,8 +30,8 @@ export default function Signup() {
                             id="outlined-basic" 
                             label="First name" 
                             variant="outlined" 
-                            defaultValue={userHook.firstName} 
-                            onChange={(event) => { userHook.setFirstName(event.target.value) }} 
+                            defaultValue={authHook.firstName} 
+                            onChange={(event) => { authHook.setFirstName(event.target.value) }} 
                             style={{
                                 width: '100%',
                             }}/>
@@ -39,8 +39,8 @@ export default function Signup() {
                             id="outlined-basic" 
                             label="Last name" 
                             variant="outlined"
-                            defaultValue={userHook.lastName} 
-                            onChange={(event) => { userHook.setLastName(event.target.value) }} 
+                            defaultValue={authHook.lastName} 
+                            onChange={(event) => { authHook.setLastName(event.target.value) }} 
                             style={{
                                 width: '100%',
                             }}/>
@@ -49,18 +49,18 @@ export default function Signup() {
                             label="Gender" 
                             variant="outlined" 
                             type="phone"
-                            defaultValue={userHook.gender} 
-                            onChange={(event) => { userHook.setGender(event.target.value) }} 
+                            defaultValue={authHook.gender} 
+                            onChange={(event) => { authHook.setGender(event.target.value) }} 
                             style={{
                                 width: '100%',
                             }}/>
                         <Button 
                             variant="contained" 
-                            onClick={() => { userHook.setStage(1); }}
+                            onClick={() => { authHook.setStage(1); }}
                             style={{
                                 width: '100%',
                                 height: 48,
-                                backgroundColor: '#2B318A',
+                                backgroundColor: '#5448C8',
                                 borderRadius: 8,
                                 color: '#ffffff',
                             }}>Next</Button>
@@ -89,14 +89,14 @@ export default function Signup() {
                             </Link>
                         </div>
                     </>
-                : userHook.stage === 1 ?
+                : authHook.stage === 1 ?
                     <>
                         <TextField 
                             id="outlined-basic" 
                             label="Email" 
                             variant="outlined"
-                            defaultValue={userHook.email} 
-                            onChange={(event) => { userHook.setEmail(event.target.value) }} 
+                            defaultValue={authHook.email} 
+                            onChange={(event) => { authHook.setEmail(event.target.value) }} 
                             style={{
                                 width: '100%',
                             }}/>
@@ -105,8 +105,8 @@ export default function Signup() {
                             label="Phone" 
                             variant="outlined" 
                             type="phone"
-                            defaultValue={userHook.phone} 
-                            onChange={(event) => { userHook.setPhone(event.target.value) }} 
+                            defaultValue={authHook.phone} 
+                            onChange={(event) => { authHook.setPhone(event.target.value) }} 
                             style={{
                                 width: '100%',
                             }}/>
@@ -120,21 +120,21 @@ export default function Signup() {
                         }}>
                             <Button 
                                 variant="contained" 
-                                onClick={() => { userHook.setStage(0); }}
+                                onClick={() => { authHook.setStage(0); }}
                                 style={{
                                     width: '100%',
                                     height: 48,
-                                    backgroundColor: '#2B318A',
+                                    backgroundColor: '#5448C8',
                                     borderRadius: 8,
                                     color: '#ffffff',
                                 }}>Back</Button>
                             <Button 
                                 variant="contained" 
-                                onClick={() => { userHook.doCreateUser(); }}
+                                onClick={() => { authHook.doCreateUser(); }}
                                 style={{
                                     width: '100%',
                                     height: 48,
-                                    backgroundColor: '#2B318A',
+                                    backgroundColor: '#5448C8',
                                     borderRadius: 8,
                                     color: '#ffffff',
                                 }}>Sign up</Button>
@@ -164,14 +164,14 @@ export default function Signup() {
                             </Link>
                         </div>
                     </>
-                : userHook.stage === 2 ?
+                : authHook.stage === 2 ?
                     <>
                         <TextField 
                             id="outlined-basic" 
                             label="Code" 
                             variant="outlined" 
-                            defaultValue={userHook.passwordCode} 
-                            onChange={(event) => { userHook.setPasswordCode(event.target.value) }} 
+                            defaultValue={authHook.passwordCode} 
+                            onChange={(event) => { authHook.setPasswordCode(event.target.value) }} 
                             style={{
                                 width: '100%',
                             }}/>
@@ -179,23 +179,23 @@ export default function Signup() {
                             id="outlined-basic" 
                             label="Password" 
                             variant="outlined"
-                            defaultValue={userHook.password} 
-                            onChange={(event) => { userHook.setPassword(event.target.value) }} 
+                            defaultValue={authHook.password} 
+                            onChange={(event) => { authHook.setPassword(event.target.value) }} 
                             style={{
                                 width: '100%',
                             }}/>
                         <Button 
                             variant="contained" 
-                            onClick={() => { userHook.doCreateUserPassword(); }}
+                            onClick={() => { authHook.doCreateUserPassword(); }}
                             style={{
                                 width: '100%',
                                 height: 48,
-                                backgroundColor: '#2B318A',
+                                backgroundColor: '#5448C8',
                                 borderRadius: 8,
                                 color: '#ffffff',
                             }}>Sign up</Button>
                     </>
-                : userHook.stage === 3 &&
+                : authHook.stage === 3 &&
                     <>
                         <div style={{
                             fontSize: 12,
@@ -216,10 +216,10 @@ export default function Signup() {
                                 style={{
                                     width: '100%',
                                     height: 48,
-                                    backgroundColor: '#2B318A',
+                                    backgroundColor: '#5448C8',
                                     borderRadius: 8,
                                     color: '#ffffff',
-                                }}>Sign up</Button>
+                                }}>Sign in</Button>
                         </Link>
                     </>
                 }

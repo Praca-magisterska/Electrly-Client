@@ -18,7 +18,6 @@ import UserContext from '@/context/UserContext';
 
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Air from '@/components/layouts/Air'
 import AccountAir from '@/components/modules/airs/AccountAir'
 import SettingsAir from '@/components/modules/airs/SettingsAir'
 import HelpAir from '@/components/modules/airs/HelpAir'
@@ -39,6 +38,7 @@ export default function RootLayout({
   const moduleBarHook = useModuleBar();
   const pageBarHook = usePageBar();
   const userHook = useUser();
+
   return (
     <html lang="en">
       <body>

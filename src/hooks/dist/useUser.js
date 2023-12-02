@@ -37,151 +37,55 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
-var ClientAuthorizationApi_1 = require("@/api/gate/ClientAuthorizationApi");
 var UserApi_1 = require("@/api/gate/UserApi");
-var UserPasswordApi_1 = require("@/api/gate/UserPasswordApi");
-var UserPasswordCodeApi_1 = require("@/api/gate/UserPasswordCodeApi");
 var react_1 = require("react");
 function useUser() {
     var _this = this;
-    var _a = react_1.useState(''), nickname = _a[0], setNickname = _a[1];
-    var _b = react_1.useState(''), firstName = _b[0], setFirstName = _b[1];
-    var _c = react_1.useState(''), lastName = _c[0], setLastName = _c[1];
-    var _d = react_1.useState(''), email = _d[0], setEmail = _d[1];
-    var _e = react_1.useState(''), phone = _e[0], setPhone = _e[1];
-    var _f = react_1.useState(''), gender = _f[0], setGender = _f[1];
-    var _g = react_1.useState(''), birthdate = _g[0], setBirthdate = _g[1];
-    var _h = react_1.useState(''), zoneInfo = _h[0], setZoneInfo = _h[1];
-    var _j = react_1.useState(''), locale = _j[0], setLocale = _j[1];
-    var _k = react_1.useState('F-'), passwordCode = _k[0], setPasswordCode = _k[1];
-    var _l = react_1.useState(''), password = _l[0], setPassword = _l[1];
-    var _m = react_1.useState(0), stage = _m[0], setStage = _m[1];
-    var doCreateUser = function () { return __awaiter(_this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            UserApi_1.createUser({
-                nickname: nickname,
-                firstName: firstName,
-                lastName: lastName,
-                email: email,
-                phone: phone,
-                gender: gender
-            })
-                .then(function (res) {
-                setStage(stage + 1);
-                return res;
-            })["catch"](function (err) {
-                return err;
-            });
-            return [2 /*return*/];
-        });
-    }); };
-    var doCreateUserPasswordCode = function () { return __awaiter(_this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            UserPasswordCodeApi_1.createUserPasswordCode({
-                email: email
-            })
-                .then(function (res) {
-                setStage(stage + 1);
-                return res;
-            })["catch"](function (err) {
-                return err;
-            });
-            return [2 /*return*/];
-        });
-    }); };
-    var doCreateUserPassword = function () { return __awaiter(_this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            UserPasswordApi_1.createUserPassword({
-                code: passwordCode,
-                password: password
-            })
-                .then(function (res) {
-                setStage(stage + 1);
-                return res;
-            })["catch"](function (err) {
-                return err;
-            });
-            return [2 /*return*/];
-        });
-    }); };
-    var doAuthorize = function () { return __awaiter(_this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            ClientAuthorizationApi_1.authorize({
-                grantType: 'password',
-                responseType: 'token',
-                scopes: [
-                    "FULL_ACCESS"
-                ],
-                clientId: 'cll6z5cqk0000vy5gay0owbgo',
-                clientSecret: 'rgohp22r9sebplofdy19ea',
-                email: email,
-                password: password
-            })
-                .then(function (res) {
-                setStage(stage + 1);
-                console.log(res);
-                localStorage.setItem('access_token', res.data.clientAccessToken.token);
-                localStorage.setItem('refresh_token', res.data.clientRefreshToken.token);
-                window.location.href = '/';
-                return res;
-            })["catch"](function (err) {
-                return err;
-            });
-            return [2 /*return*/];
-        });
-    }); };
-    var doRefreshToken = function () { return __awaiter(_this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            ClientAuthorizationApi_1.refreshToken()
-                .then(function (res) {
-                return res;
-            })["catch"](function (err) {
-                return err;
-            });
-            return [2 /*return*/];
-        });
-    }); };
-    var doRevokeToken = function () { return __awaiter(_this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            ClientAuthorizationApi_1.revokeToken({
-                accesstoken: localStorage.getItem('access_token'),
-                refreshtoken: localStorage.getItem('refresh_token')
-            })
-                .then(function (res) {
-                setStage(stage + 1);
-                localStorage.removeItem('access_token');
-                localStorage.removeItem('refresh_token');
-                window.location.href = '/signin';
-                return res;
-            })["catch"](function (err) {
-                return err;
-            });
-            return [2 /*return*/];
-        });
-    }); };
-    // const doGetUser = async () => {
-    //     getUser('me')
-    //     .then((res) => {
-    //         console.log(res);
-    //         return res;
-    //     })
-    //     .catch((err) => {
-    //         return err;
-    //     })
-    // }
+    var _a = react_1.useState(false), isSignedOn = _a[0], setIsSignedOn = _a[1];
+    var _b = react_1.useState(''), nickname = _b[0], setNickname = _b[1];
+    var _c = react_1.useState(''), firstName = _c[0], setFirstName = _c[1];
+    var _d = react_1.useState(''), lastName = _d[0], setLastName = _d[1];
+    var _e = react_1.useState(''), email = _e[0], setEmail = _e[1];
+    var _f = react_1.useState(''), phone = _f[0], setPhone = _f[1];
+    var _g = react_1.useState(''), gender = _g[0], setGender = _g[1];
+    var _h = react_1.useState(''), birthdate = _h[0], setBirthdate = _h[1];
+    var _j = react_1.useState(''), zoneInfo = _j[0], setZoneInfo = _j[1];
+    var _k = react_1.useState(''), locale = _k[0], setLocale = _k[1];
+    var _l = react_1.useState(''), imageUrl = _l[0], setImageUrl = _l[1];
+    var _m = react_1.useState(''), language = _m[0], setLanguage = _m[1];
+    var _o = react_1.useState(''), theme = _o[0], setTheme = _o[1];
     var doGetUser = function () { return __awaiter(_this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             return [2 /*return*/, new Promise(function (resolve, reject) {
                     UserApi_1.getUser('me')
                         .then(function (response) {
+                        setIsSignedOn(true);
+                        setNickname(response.data.nickname);
+                        setFirstName(response.data.firstName);
+                        setLastName(response.data.lastName);
+                        setEmail(response.data.email);
+                        setPhone(response.data.phone);
+                        setGender(response.data.gender);
+                        setBirthdate(response.data.birthdate);
+                        setZoneInfo(response.data.zoneInfo);
+                        setLocale(response.data.locale);
+                        setImageUrl(response.data.imageUrl);
+                        setLanguage(response.data.language);
+                        setTheme(response.data.theme);
                         resolve(response);
                     })["catch"](function (error) {
+                        setIsSignedOn(false);
                         reject(error);
                     });
                 })];
         });
     }); };
+    react_1.useEffect(function () {
+        doGetUser();
+    }, []);
     return {
+        isSignedOn: isSignedOn,
+        setIsSignedOn: setIsSignedOn,
         nickname: nickname,
         setNickname: setNickname,
         firstName: firstName,
@@ -200,18 +104,12 @@ function useUser() {
         setZoneInfo: setZoneInfo,
         locale: locale,
         setLocale: setLocale,
-        passwordCode: passwordCode,
-        setPasswordCode: setPasswordCode,
-        password: password,
-        setPassword: setPassword,
-        stage: stage,
-        setStage: setStage,
-        doCreateUser: doCreateUser,
-        doCreateUserPasswordCode: doCreateUserPasswordCode,
-        doCreateUserPassword: doCreateUserPassword,
-        doAuthorize: doAuthorize,
-        doRefreshToken: doRefreshToken,
-        doRevokeToken: doRevokeToken,
+        imageUrl: imageUrl,
+        setImageUrl: setImageUrl,
+        language: language,
+        setLanguage: setLanguage,
+        theme: theme,
+        setTheme: setTheme,
         doGetUser: doGetUser
     };
 }

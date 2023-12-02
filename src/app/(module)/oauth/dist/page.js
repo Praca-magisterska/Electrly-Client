@@ -3,7 +3,7 @@ exports.__esModule = true;
 var Page_1 = require("@/components/layouts/Page");
 var Button_1 = require("@mui/material/Button");
 var PageFormContent_1 = require("@/components/layouts/PageFormContent");
-function Signin() {
+function OAuth() {
     return (React.createElement(Page_1["default"], null,
         React.createElement(PageFormContent_1["default"], { header: 'Grant Access' },
             React.createElement("div", { style: {
@@ -41,4 +41,4 @@ function Signin() {
                     color: '#ffffff'
                 } }, "Allow"))));
 }
-exports["default"] = Signin;
+exports["default"] = OAuth;

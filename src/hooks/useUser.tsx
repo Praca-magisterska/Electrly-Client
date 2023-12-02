@@ -1,11 +1,10 @@
 "use client"
-import { authorize, refreshToken, revokeToken } from '@/api/gate/ClientAuthorizationApi';
-import { createUser, getUser } from '@/api/gate/UserApi';
-import { createUserPassword } from '@/api/gate/UserPasswordApi';
-import { createUserPasswordCode } from '@/api/gate/UserPasswordCodeApi';
-import { useState } from 'react';
+import { getUser } from '@/api/gate/UserApi';
+import { useEffect, useState } from 'react';
 
 export default function useUser() {
+    const [isSignedOn, setIsSignedOn] = useState(false);
+
     const [nickname, setNickname] = useState('');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -15,138 +14,44 @@ export default function useUser() {
     const [birthdate, setBirthdate] = useState('');
     const [zoneInfo, setZoneInfo] = useState('');
     const [locale, setLocale] = useState('');
+    const [imageUrl, setImageUrl] = useState('');
 
-    const [passwordCode, setPasswordCode] = useState('F-');
-    const [password, setPassword] = useState('');
-
-    const [stage, setStage] = useState(0);
-
-    const doCreateUser = async () => {
-        createUser({
-            nickname: nickname,
-            firstName: firstName,
-            lastName: lastName,
-            email: email,
-            phone: phone,
-            gender: gender,
-            // birthdate: birthdate,
-            // zoneInfo: zoneInfo,
-            // locale: locale
-        })
-        .then((res) => {
-            setStage(stage + 1);
-            return res;
-        })
-        .catch((err) => {
-            return err;
-        })
-    }
-
-    const doCreateUserPasswordCode = async () => {
-        createUserPasswordCode({
-            email: email
-        })
-        .then((res) => {
-            setStage(stage + 1);
-            return res;
-        })
-        .catch((err) => {
-            return err;
-        })
-    }
-
-    const doCreateUserPassword = async () => {
-        createUserPassword({
-            code: passwordCode,
-            password: password
-        })
-        .then((res) => {
-            setStage(stage + 1);
-            return res;
-        })
-        .catch((err) => {
-            return err;
-        })
-    }
-
-    const doAuthorize = async () => {
-        authorize({
-            grantType: 'password',
-            responseType: 'token',
-            scopes: [
-                "FULL_ACCESS"
-            ],
-            clientId: 'cll6z5cqk0000vy5gay0owbgo',
-            clientSecret: 'rgohp22r9sebplofdy19ea',
-            email: email,
-            password: password
-        })
-        .then((res: any) => {
-            setStage(stage + 1);
-            console.log(res);
-            localStorage.setItem('access_token', res.data.clientAccessToken.token);
-            localStorage.setItem('refresh_token', res.data.clientRefreshToken.token);
-            window.location.href = '/';
-            return res;
-        })
-        .catch((err) => {
-            return err;
-        })
-    }
-
-    const doRefreshToken = async () => {
-        refreshToken()
-        .then((res) => {
-            return res;
-        })
-        .catch((err) => {
-            return err;
-        })
-
-    }
-
-    const doRevokeToken = async () => {
-        revokeToken({
-            accesstoken: localStorage.getItem('access_token'),
-            refreshtoken: localStorage.getItem('refresh_token')  
-        })
-        .then((res) => {
-            setStage(stage + 1);
-            localStorage.removeItem('access_token');
-            localStorage.removeItem('refresh_token');
-            window.location.href = '/signin';
-            return res;
-        })
-        .catch((err) => {
-            return err;
-        })
-    }
-
-    // const doGetUser = async () => {
-    //     getUser('me')
-    //     .then((res) => {
-    //         console.log(res);
-    //         return res;
-    //     })
-    //     .catch((err) => {
-    //         return err;
-    //     })
-    // }
+    const [language, setLanguage] = useState('');
+    const [theme, setTheme] = useState('');
 
     const doGetUser = async () => {
         return new Promise((resolve, reject) => {
             getUser('me')
             .then((response: any) => {
+                setIsSignedOn(true);
+                setNickname(response.data.nickname);
+                setFirstName(response.data.firstName);
+                setLastName(response.data.lastName);
+                setEmail(response.data.email);
+                setPhone(response.data.phone);
+                setGender(response.data.gender);
+                setBirthdate(response.data.birthdate);
+                setZoneInfo(response.data.zoneInfo);
+                setLocale(response.data.locale);
+                setImageUrl(response.data.imageUrl);
+                setLanguage(response.data.language);
+                setTheme(response.data.theme);
                 resolve(response);
             })
             .catch(error => {
+                setIsSignedOn(false);
                 reject(error);
             });
         });
     }
 
+    useEffect(() => {
+        doGetUser();
+    }, []);
 
     return {
+        isSignedOn,
+        setIsSignedOn,
         nickname,
         setNickname,
         firstName,
@@ -165,18 +70,12 @@ export default function useUser() {
         setZoneInfo,
         locale,
         setLocale,
-        passwordCode,
-        setPasswordCode,
-        password,
-        setPassword,
-        stage,
-        setStage,
-        doCreateUser,
-        doCreateUserPasswordCode,
-        doCreateUserPassword,
-        doAuthorize,
-        doRefreshToken,
-        doRevokeToken,
+        imageUrl,
+        setImageUrl,
+        language,
+        setLanguage,
+        theme,
+        setTheme,
         doGetUser
     }
 }
