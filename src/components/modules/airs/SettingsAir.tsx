@@ -13,10 +13,10 @@ export default function SettingsAir() {
         <Air code='settings'>
             <AirContent>
                 <AirContentSection title="Display settings">
-                    
+                    TODO: Display setting!!!
                 </AirContentSection>
                 <AirContentSection title="Account settings">
-                    
+                    TODO: Account settings!!!
                 </AirContentSection>
             </AirContent>
         </Air>

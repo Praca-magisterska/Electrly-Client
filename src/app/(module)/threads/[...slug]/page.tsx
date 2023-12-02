@@ -49,7 +49,7 @@ export default function Thread() {
           <PageContent
             header = {
                 <div>
-                  {/* header */}
+                  TODO: Thread header!!!
                 </div>
             }
             footer = {
@@ -58,7 +58,7 @@ export default function Thread() {
                 </div>
             }>
             <PageContentSection title="Answers">
-              
+              TODO: Thread answers!!!
             </PageContentSection>
           </PageContent>
         </Page>
