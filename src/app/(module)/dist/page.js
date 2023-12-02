@@ -3,6 +3,7 @@ exports.__esModule = true;
 var Page_1 = require("@/components/layouts/Page");
 var PageContent_1 = require("@/components/layouts/PageContent");
 var PageContentSection_1 = require("@/components/layouts/PageContentSection");
+var link_1 = require("next/link");
 var TrendingThreadCard_1 = require("@/components/elements/cards/TrendingThreadCard");
 function Signin() {
     var trendingThreads = [
@@ -45,8 +46,107 @@ function Signin() {
     ];
     return (React.createElement(Page_1["default"], null,
         React.createElement(PageContent_1["default"], { header: React.createElement("div", null), footer: React.createElement("div", null) },
-            React.createElement(PageContentSection_1["default"], { title: "Trending Today" }, trendingThreads.map(function (thread, index) { return (React.createElement(TrendingThreadCard_1["default"], { key: index, thread: thread })); })),
-            React.createElement(PageContentSection_1["default"], { title: "Nav", showTitle: false }),
-            React.createElement(PageContentSection_1["default"], { title: "Threads & Discussion" }))));
+            React.createElement(PageContentSection_1["default"], { title: "Trending Today" },
+                React.createElement("div", { style: {
+                        width: '100%',
+                        display: "flex",
+                        flexDirection: "row",
+                        flexWrap: 'wrap',
+                        justifyContent: "space-between",
+                        gap: 32
+                    } }, trendingThreads.map(function (thread, index) { return (React.createElement(TrendingThreadCard_1["default"], { key: index, thread: thread })); }))),
+            React.createElement(PageContentSection_1["default"], { title: "Nav", showTitle: false },
+                React.createElement("div", { style: {
+                        width: '100%',
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                        gap: 64
+                    } },
+                    React.createElement("div", { style: {
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            minHeight: 64,
+                            minWidth: 500,
+                            maxWidth: 1000,
+                            width: '60%',
+                            borderRadius: 8,
+                            backgroundColor: 'white',
+                            color: "black"
+                        } }),
+                    React.createElement(link_1["default"], { href: '/threads/create', style: {
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            minHeight: 64,
+                            minWidth: 200,
+                            maxWidth: 500,
+                            width: '35%',
+                            borderRadius: 8,
+                            backgroundColor: '#5448C8',
+                            color: "white",
+                            fontSize: 16,
+                            fontWeight: 700
+                        } }, "Write new thread"))),
+            React.createElement(PageContentSection_1["default"], { title: "Threads & Discussion" },
+                React.createElement("div", { style: {
+                        width: '100%',
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                        gap: 64
+                    } },
+                    React.createElement("div", { style: {
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "flex-start",
+                            justifyContent: "flex-start",
+                            minHeight: 64,
+                            minWidth: 500,
+                            maxWidth: 1000,
+                            width: '60%',
+                            borderRadius: 8,
+                            color: "black"
+                        } }, "TODO: Threads!!!"),
+                    React.createElement("div", { style: {
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "flex-start",
+                            justifyContent: "center",
+                            minWidth: 200,
+                            maxWidth: 500,
+                            width: '35%'
+                        } },
+                        React.createElement("div", { style: {
+                                padding: 16,
+                                width: '100%',
+                                borderRadius: 8,
+                                backgroundColor: 'white',
+                                color: "black",
+                                display: "flex",
+                                flexDirection: "column",
+                                gap: 16
+                            } },
+                            React.createElement("div", { style: {
+                                    fontSize: 18,
+                                    fontWeight: 700
+                                } }, "Top Trending Topic"),
+                            React.createElement("div", { style: {
+                                    fontSize: 14,
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    gap: 16
+                                } },
+                                React.createElement("div", null, "#1     Introduction to ESP32: Getting Started and Basics"),
+                                React.createElement("div", null, "#2     ESP32 vs. ESP8266: A Comparative Analysis"),
+                                React.createElement("div", null, "#3     Programming ESP32 with Arduino IDE: Tips and Tricks"),
+                                React.createElement("div", null, "#4     IoT Projects with ESP32: Share Your Ideas and Experiences"),
+                                React.createElement("div", null, "#5     Troubleshooting ESP32 Wi-Fi Connectivity Issues"),
+                                React.createElement("div", null, "#6     Powering ESP32: Battery vs. USB vs. Solar Panel"),
+                                React.createElement("div", null, "#7     Interfacing Sensors with ESP32: A Beginner`s Guide"),
+                                React.createElement("div", null, "#8     Customizing the ESP32 Development Environment")))))))));
 }
 exports["default"] = Signin;

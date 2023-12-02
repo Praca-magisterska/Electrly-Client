@@ -139,6 +139,6 @@ function AccountAir() {
                             border: '2px solid #5448C8',
                             color: "black"
                         } }, t('Reset password')))),
-            React.createElement(AirContentSection_1["default"], { title: t("Your threads") }))));
+            React.createElement(AirContentSection_1["default"], { title: t("Your threads") }, "TODO: Threads!!!"))));
 }
 exports["default"] = AccountAir;

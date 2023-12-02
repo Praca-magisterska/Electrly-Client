@@ -7,7 +7,9 @@ export default function TrendingThreadCard({
 }) {
     return (
         <Link href={'/threads/'+thread.id} style={{
-            width: 226,
+            maxWidth: 226,
+            minWidth: 150,
+            width: '14%',
             height: 206,
             display: 'flex',
             alignItems: 'center',

@@ -5,7 +5,9 @@ function PageContent(_a) {
     var header = _a.header, children = _a.children, footer = _a.footer;
     return (React.createElement("div", { className: page_content_module_scss_1["default"].page_content },
         React.createElement("div", { className: page_content_module_scss_1["default"].page_content__inner },
-            React.createElement("div", { className: page_content_module_scss_1["default"].page_content__header }, header),
+            header ?
+                React.createElement("div", { className: page_content_module_scss_1["default"].page_content__header }, header)
+                : null,
             React.createElement("div", { className: page_content_module_scss_1["default"].page_content__main }, children),
             React.createElement("div", { className: page_content_module_scss_1["default"].page_content__footer }, footer))));
 }

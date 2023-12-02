@@ -115,6 +115,6 @@ function SearchAir() {
                         flexWrap: 'wrap',
                         gap: 16
                     } }, searchedPeople.map(function (user) { return (React.createElement(UserSearchCard, { key: user.id, user: user })); }))),
-            React.createElement(AirContentSection_1["default"], { title: "Threads" }))));
+            React.createElement(AirContentSection_1["default"], { title: "Threads" }, "TODO: Threads!!!"))));
 }
 exports["default"] = SearchAir;

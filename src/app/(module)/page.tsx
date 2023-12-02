@@ -11,6 +11,7 @@ import PageContentSection from "@/components/layouts/PageContentSection";
 import Image from 'next/image'
 import Link from 'next/link'
 import TrendingThreadCard from "@/components/elements/cards/TrendingThreadCard";
+import { wrap } from "module";
 
 export default function Signin() {
     let trendingThreads = [
@@ -66,15 +67,124 @@ export default function Signin() {
                 </div>
             }>
             <PageContentSection title="Trending Today">
-              {trendingThreads.map((thread, index) => (
-                <TrendingThreadCard key={index} thread={thread} />
-              ))}
+              <div style={{
+                width: '100%',
+                display: "flex",
+                flexDirection: "row",
+                flexWrap: 'wrap',
+                justifyContent: "space-between",
+                gap: 32
+              }}>
+                {trendingThreads.map((thread, index) => (
+                  <TrendingThreadCard key={index} thread={thread} />
+                ))}
+              </div>
             </PageContentSection>
             <PageContentSection title="Nav" showTitle={false}>
-
+              <div style={{
+                width: '100%',
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                gap: 64
+              }}>
+                <div style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    minHeight: 64,
+                    minWidth: 500,
+                    maxWidth: 1000,
+                    width: '60%',
+                    borderRadius: 8,
+                    backgroundColor: 'white',
+                    color: "black"
+                }}></div>
+                <Link href={'/threads/create'} style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    minHeight: 64,
+                    minWidth: 200,
+                    maxWidth: 500,
+                    width: '35%',
+                    borderRadius: 8,
+                    backgroundColor: '#5448C8',
+                    color: "white",
+                    fontSize: 16,
+                    fontWeight: 700
+                }}>
+                    Write new thread
+                </Link>
+              </div>
             </PageContentSection>
             <PageContentSection title="Threads & Discussion">
-              
+            <div style={{
+                width: '100%',
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                gap: 64
+              }}>
+                <div style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                    justifyContent: "flex-start",
+                    minHeight: 64,
+                    minWidth: 500,
+                    maxWidth: 1000,
+                    width: '60%',
+                    borderRadius: 8,
+                    color: "black"
+                }}>
+                  TODO: Threads!!!
+                </div>
+                <div style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "flex-start",
+                    justifyContent: "center",
+                    minWidth: 200,
+                    maxWidth: 500,
+                    width: '35%',
+                }}>
+                  <div style={{
+                    padding: 16,
+                    width: '100%',
+                    borderRadius: 8,
+                    backgroundColor: 'white',
+                    color: "black",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 16
+                  }}>
+                    <div style={{
+                      fontSize: 18,
+                      fontWeight: 700
+                    }}>
+                      Top Trending Topic
+                    </div>
+                    <div style={{
+                      fontSize: 14,
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: 16
+                    }}>
+                      <div>#1     Introduction to ESP32: Getting Started and Basics</div>
+                      <div>#2     ESP32 vs. ESP8266: A Comparative Analysis</div>
+                      <div>#3     Programming ESP32 with Arduino IDE: Tips and Tricks</div>
+                      <div>#4     IoT Projects with ESP32: Share Your Ideas and Experiences</div>
+                      <div>#5     Troubleshooting ESP32 Wi-Fi Connectivity Issues</div>
+                      <div>#6     Powering ESP32: Battery vs. USB vs. Solar Panel</div>
+                      <div>#7     Interfacing Sensors with ESP32: A Beginner`s Guide</div>
+                      <div>#8     Customizing the ESP32 Development Environment</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </PageContentSection>
           </PageContent>
         </Page>

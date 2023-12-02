@@ -12,9 +12,11 @@ export default function PageContent({
     return (
         <div className={styles.page_content}>
             <div className={styles.page_content__inner}>
-                <div className={styles.page_content__header}>
-                    {header}
-                </div>
+                {header ?
+                    <div className={styles.page_content__header}>
+                        {header}
+                    </div>
+                :null}
                 <div className={styles.page_content__main}>
                     {children}
                 </div>

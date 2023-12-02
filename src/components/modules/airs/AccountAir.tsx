@@ -160,7 +160,7 @@ export default function AccountAir() {
                     </div>
                 </AirContentSection>
                 <AirContentSection title={t("Your threads")}>
-                    
+                    TODO: Threads!!!
                 </AirContentSection>
             </AirContent>
         </Air>

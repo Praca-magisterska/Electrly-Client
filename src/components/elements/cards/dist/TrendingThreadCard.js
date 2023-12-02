@@ -4,7 +4,9 @@ var link_1 = require("next/link");
 function TrendingThreadCard(_a) {
     var thread = _a.thread;
     return (React.createElement(link_1["default"], { href: '/threads/' + thread.id, style: {
-            width: 226,
+            maxWidth: 226,
+            minWidth: 150,
+            width: '14%',
             height: 206,
             display: 'flex',
             alignItems: 'center',
