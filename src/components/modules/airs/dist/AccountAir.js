@@ -7,9 +7,8 @@ var AirContentSection_1 = require("@/components/layouts/AirContentSection");
 var UserContext_1 = require("@/context/UserContext");
 var link_1 = require("next/link");
 var AirContext_1 = require("@/context/AirContext");
-var react_i18next_1 = require("react-i18next");
+var ThreadCard_1 = require("@/components/elements/cards/ThreadCard");
 function AccountAir() {
-    var t = react_i18next_1.useTranslation().t;
     var airContext = react_1.useContext(AirContext_1["default"]);
     var userContext = react_1.useContext(UserContext_1["default"]);
     return (React.createElement(Air_1["default"], { code: 'account' },
@@ -60,7 +59,7 @@ function AccountAir() {
                             borderRadius: 8,
                             backgroundColor: '#5448C8',
                             color: "white"
-                        } }, t('Manage account'))),
+                        } }, "Manage account")),
                 React.createElement("div", { style: {
                         display: "flex",
                         flexDirection: "row",
@@ -79,14 +78,14 @@ function AccountAir() {
                             borderRadius: 8,
                             border: '2px solid #5448C8',
                             color: "black"
-                        } }, t('Sign out')))),
+                        } }, "Sign out"))),
             React.createElement(AirContentSection_1["default"], { title: "Details", showTitle: false, show: !userContext.isSignedOn },
                 React.createElement("div", { style: {
                         display: "flex",
                         flexDirection: "row",
                         justifyContent: "center",
                         width: '100%'
-                    } }),
+                    } }, "TODO: Photo!!!"),
                 React.createElement("div", { style: {
                         display: "flex",
                         flexDirection: "row",
@@ -105,7 +104,7 @@ function AccountAir() {
                             borderRadius: 8,
                             backgroundColor: '#5448C8',
                             color: "white"
-                        } }, t('Sign in'))),
+                        } }, "Sign in")),
                 React.createElement("div", { style: {
                         display: "flex",
                         flexDirection: "row",
@@ -138,7 +137,73 @@ function AccountAir() {
                             borderRadius: 8,
                             border: '2px solid #5448C8',
                             color: "black"
-                        } }, t('Reset password')))),
-            React.createElement(AirContentSection_1["default"], { title: t("Your threads") }, "TODO: Threads!!!"))));
+                        } }, "Reset password"))),
+            React.createElement(AirContentSection_1["default"], { title: "Your threads", show: userContext.isSignedOn },
+                React.createElement(ThreadCard_1["default"], { showUser: false, thread: {
+                        id: 0,
+                        title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel.',
+                        threadReactionsResult: 10,
+                        user: {
+                            id: 0,
+                            imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                            nickname: 'Liteon X'
+                        }
+                    } }),
+                React.createElement(ThreadCard_1["default"], { showUser: false, thread: {
+                        id: 0,
+                        title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel.',
+                        threadReactionsResult: 10,
+                        user: {
+                            id: 0,
+                            imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                            nickname: 'Liteon X'
+                        }
+                    } }),
+                React.createElement(ThreadCard_1["default"], { showUser: false, thread: {
+                        id: 0,
+                        title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel.',
+                        threadReactionsResult: 10,
+                        user: {
+                            id: 0,
+                            imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                            nickname: 'Liteon X'
+                        }
+                    } }),
+                React.createElement(ThreadCard_1["default"], { showUser: false, thread: {
+                        id: 0,
+                        title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel.',
+                        threadReactionsResult: 10,
+                        user: {
+                            id: 0,
+                            imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                            nickname: 'Liteon X'
+                        }
+                    } }),
+                React.createElement(ThreadCard_1["default"], { showUser: false, thread: {
+                        id: 0,
+                        title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel.',
+                        threadReactionsResult: 10,
+                        user: {
+                            id: 0,
+                            imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                            nickname: 'Liteon X'
+                        }
+                    } }),
+                React.createElement(ThreadCard_1["default"], { showUser: false, thread: {
+                        id: 0,
+                        title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel.',
+                        threadReactionsResult: 10,
+                        user: {
+                            id: 0,
+                            imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                            nickname: 'Liteon X'
+                        }
+                    } })))));
 }
 exports["default"] = AccountAir;

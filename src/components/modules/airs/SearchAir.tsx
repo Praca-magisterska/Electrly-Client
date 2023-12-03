@@ -1,3 +1,4 @@
+import ThreadCard from '@/components/elements/cards/ThreadCard';
 import Air from '@/components/layouts/Air';
 import AirContent from "@/components/layouts/AirContent";
 import AirContentSection from "@/components/layouts/AirContentSection";
@@ -17,7 +18,7 @@ function UserSearchCard({
             alignItems: 'center',
             justifyContent: 'flex-start',
             gap: 16,
-            width: 176
+            width: 160
         }}>
             <div style={{
                 minWidth: 48,
@@ -137,7 +138,73 @@ export default function SearchAir() {
                     </div>
                 </AirContentSection>
                 <AirContentSection title="Threads">
-                    TODO: Threads!!!
+                    {/* TODO: Threads!!! */}
+                    <ThreadCard thread={{
+                    id: 0,
+                    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel.',
+                    threadReactionsResult: 10,
+                    user: {
+                      id: 0,
+                      imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                      nickname: 'Liteon X'
+                    }
+                  }}/>
+                  <ThreadCard thread={{
+                    id: 0,
+                    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel.',
+                    threadReactionsResult: 10,
+                    user: {
+                      id: 0,
+                      imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                      nickname: 'Liteon X'
+                    }
+                  }}/>
+                  <ThreadCard thread={{
+                    id: 0,
+                    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel.',
+                    threadReactionsResult: 10,
+                    user: {
+                      id: 0,
+                      imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                      nickname: 'Liteon X'
+                    }
+                  }}/>
+                  <ThreadCard thread={{
+                    id: 0,
+                    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel.',
+                    threadReactionsResult: 10,
+                    user: {
+                      id: 0,
+                      imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                      nickname: 'Liteon X'
+                    }
+                  }}/>
+                  <ThreadCard thread={{
+                    id: 0,
+                    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel.',
+                    threadReactionsResult: 10,
+                    user: {
+                      id: 0,
+                      imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                      nickname: 'Liteon X'
+                    }
+                  }}/>
+                  <ThreadCard thread={{
+                    id: 0,
+                    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel.',
+                    threadReactionsResult: 10,
+                    user: {
+                      id: 0,
+                      imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                      nickname: 'Liteon X'
+                    }
+                  }}/>
                 </AirContentSection>
             </AirContent>
         </Air>

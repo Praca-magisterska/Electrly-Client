@@ -4,6 +4,8 @@ import LoginOutlinedIcon from '@mui/icons-material/LoginOutlined';
 import PersonAddOutlinedIcon from '@mui/icons-material/PersonAddOutlined';
 import KeyOutlinedIcon from '@mui/icons-material/KeyOutlined';
 
+import { useContext, useEffect, useState } from "react";
+
 import Page from "@/components/layouts/Page";
 import PageContent from "@/components/layouts/PageContent";
 import PageContentSection from "@/components/layouts/PageContentSection";
@@ -12,8 +14,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import TrendingThreadCard from "@/components/elements/cards/TrendingThreadCard";
 import { wrap } from "module";
+import UserContext from "@/context/UserContext";
+import ThreadCard from "@/components/elements/cards/ThreadCard";
 
-export default function Signin() {
+export default function Home() {
     let trendingThreads = [
       {
         id: 0,
@@ -57,8 +61,12 @@ export default function Signin() {
         <Page>
           <PageContent
             header = {
-                <div>
+                <div style={{
+                  fontSize: 24,
+                  fontWeight: 700
+                }}>
                   {/* header */}
+                  Hello, welcome back!
                 </div>
             }
             footer = {
@@ -100,7 +108,9 @@ export default function Signin() {
                     borderRadius: 8,
                     backgroundColor: 'white',
                     color: "black"
-                }}></div>
+                }}>
+                  TODO: Filters!!!
+                </div>
                 <Link href={'/threads/create'} style={{
                     display: "flex",
                     flexDirection: "row",
@@ -133,14 +143,111 @@ export default function Signin() {
                     flexDirection: "column",
                     alignItems: "flex-start",
                     justifyContent: "flex-start",
-                    minHeight: 64,
                     minWidth: 500,
                     maxWidth: 1000,
                     width: '60%',
-                    borderRadius: 8,
-                    color: "black"
+                    gap: 32
                 }}>
-                  TODO: Threads!!!
+                  {/* TODO: Threads!!! */}
+                  <ThreadCard thread={{
+                    id: 0,
+                    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel. Fusce vel vehicula felis. Ut sem erat, aliquam ac lectus eu, sagittis ultrices metus. Aliquam venenatis est ut maximus semper. Suspendisse bibendum massa quam, non elementum ex commodo at. Quisque non ligula magna. Phasellus egestas nec massa sit amet sagittis.',
+                    threadReactionsResult: 10,
+                    user: {
+                      id: 0,
+                      imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                      nickname: 'Liteon X'
+                    }
+                  }}/>
+                  <ThreadCard thread={{
+                    id: 0,
+                    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel. Fusce vel vehicula felis. Ut sem erat, aliquam ac lectus eu, sagittis ultrices metus. Aliquam venenatis est ut maximus semper. Suspendisse bibendum massa quam, non elementum ex commodo at. Quisque non ligula magna. Phasellus egestas nec massa sit amet sagittis.',
+                    threadReactionsResult: 10,
+                    user: {
+                      id: 0,
+                      imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                      nickname: 'Liteon X'
+                    }
+                  }}/>
+                  <ThreadCard thread={{
+                    id: 0,
+                    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel. Fusce vel vehicula felis. Ut sem erat, aliquam ac lectus eu, sagittis ultrices metus. Aliquam venenatis est ut maximus semper. Suspendisse bibendum massa quam, non elementum ex commodo at. Quisque non ligula magna. Phasellus egestas nec massa sit amet sagittis.',
+                    threadReactionsResult: 10,
+                    user: {
+                      id: 0,
+                      imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                      nickname: 'Liteon X'
+                    }
+                  }}/>
+                  <ThreadCard thread={{
+                    id: 0,
+                    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel. Fusce vel vehicula felis. Ut sem erat, aliquam ac lectus eu, sagittis ultrices metus. Aliquam venenatis est ut maximus semper. Suspendisse bibendum massa quam, non elementum ex commodo at. Quisque non ligula magna. Phasellus egestas nec massa sit amet sagittis.',
+                    threadReactionsResult: 10,
+                    user: {
+                      id: 0,
+                      imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                      nickname: 'Liteon X'
+                    }
+                  }}/>
+                  <ThreadCard thread={{
+                    id: 0,
+                    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel. Fusce vel vehicula felis. Ut sem erat, aliquam ac lectus eu, sagittis ultrices metus. Aliquam venenatis est ut maximus semper. Suspendisse bibendum massa quam, non elementum ex commodo at. Quisque non ligula magna. Phasellus egestas nec massa sit amet sagittis.',
+                    threadReactionsResult: 10,
+                    user: {
+                      id: 0,
+                      imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                      nickname: 'Liteon X'
+                    }
+                  }}/>
+                  <ThreadCard thread={{
+                    id: 0,
+                    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel. Fusce vel vehicula felis. Ut sem erat, aliquam ac lectus eu, sagittis ultrices metus. Aliquam venenatis est ut maximus semper. Suspendisse bibendum massa quam, non elementum ex commodo at. Quisque non ligula magna. Phasellus egestas nec massa sit amet sagittis.',
+                    threadReactionsResult: 10,
+                    user: {
+                      id: 0,
+                      imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                      nickname: 'Liteon X'
+                    }
+                  }}/>
+                  <ThreadCard thread={{
+                    id: 0,
+                    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel. Fusce vel vehicula felis. Ut sem erat, aliquam ac lectus eu, sagittis ultrices metus. Aliquam venenatis est ut maximus semper. Suspendisse bibendum massa quam, non elementum ex commodo at. Quisque non ligula magna. Phasellus egestas nec massa sit amet sagittis.',
+                    threadReactionsResult: 10,
+                    user: {
+                      id: 0,
+                      imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                      nickname: 'Liteon X'
+                    }
+                  }}/>
+                  <ThreadCard thread={{
+                    id: 0,
+                    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel. Fusce vel vehicula felis. Ut sem erat, aliquam ac lectus eu, sagittis ultrices metus. Aliquam venenatis est ut maximus semper. Suspendisse bibendum massa quam, non elementum ex commodo at. Quisque non ligula magna. Phasellus egestas nec massa sit amet sagittis.',
+                    threadReactionsResult: 10,
+                    user: {
+                      id: 0,
+                      imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                      nickname: 'Liteon X'
+                    }
+                  }}/>
+                  <ThreadCard thread={{
+                    id: 0,
+                    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel. Fusce vel vehicula felis. Ut sem erat, aliquam ac lectus eu, sagittis ultrices metus. Aliquam venenatis est ut maximus semper. Suspendisse bibendum massa quam, non elementum ex commodo at. Quisque non ligula magna. Phasellus egestas nec massa sit amet sagittis.',
+                    threadReactionsResult: 10,
+                    user: {
+                      id: 0,
+                      imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                      nickname: 'Liteon X'
+                    }
+                  }}/>
                 </div>
                 <div style={{
                     display: "flex",

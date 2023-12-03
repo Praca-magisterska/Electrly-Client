@@ -5,7 +5,8 @@ var PageContent_1 = require("@/components/layouts/PageContent");
 var PageContentSection_1 = require("@/components/layouts/PageContentSection");
 var link_1 = require("next/link");
 var TrendingThreadCard_1 = require("@/components/elements/cards/TrendingThreadCard");
-function Signin() {
+var ThreadCard_1 = require("@/components/elements/cards/ThreadCard");
+function Home() {
     var trendingThreads = [
         {
             id: 0,
@@ -45,7 +46,10 @@ function Signin() {
         }
     ];
     return (React.createElement(Page_1["default"], null,
-        React.createElement(PageContent_1["default"], { header: React.createElement("div", null), footer: React.createElement("div", null) },
+        React.createElement(PageContent_1["default"], { header: React.createElement("div", { style: {
+                    fontSize: 24,
+                    fontWeight: 700
+                } }, "Hello, welcome back!"), footer: React.createElement("div", null) },
             React.createElement(PageContentSection_1["default"], { title: "Trending Today" },
                 React.createElement("div", { style: {
                         width: '100%',
@@ -75,7 +79,7 @@ function Signin() {
                             borderRadius: 8,
                             backgroundColor: 'white',
                             color: "black"
-                        } }),
+                        } }, "TODO: Filters!!!"),
                     React.createElement(link_1["default"], { href: '/threads/create', style: {
                             display: "flex",
                             flexDirection: "row",
@@ -104,13 +108,110 @@ function Signin() {
                             flexDirection: "column",
                             alignItems: "flex-start",
                             justifyContent: "flex-start",
-                            minHeight: 64,
                             minWidth: 500,
                             maxWidth: 1000,
                             width: '60%',
-                            borderRadius: 8,
-                            color: "black"
-                        } }, "TODO: Threads!!!"),
+                            gap: 32
+                        } },
+                        React.createElement(ThreadCard_1["default"], { thread: {
+                                id: 0,
+                                title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                                content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel. Fusce vel vehicula felis. Ut sem erat, aliquam ac lectus eu, sagittis ultrices metus. Aliquam venenatis est ut maximus semper. Suspendisse bibendum massa quam, non elementum ex commodo at. Quisque non ligula magna. Phasellus egestas nec massa sit amet sagittis.',
+                                threadReactionsResult: 10,
+                                user: {
+                                    id: 0,
+                                    imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                                    nickname: 'Liteon X'
+                                }
+                            } }),
+                        React.createElement(ThreadCard_1["default"], { thread: {
+                                id: 0,
+                                title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                                content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel. Fusce vel vehicula felis. Ut sem erat, aliquam ac lectus eu, sagittis ultrices metus. Aliquam venenatis est ut maximus semper. Suspendisse bibendum massa quam, non elementum ex commodo at. Quisque non ligula magna. Phasellus egestas nec massa sit amet sagittis.',
+                                threadReactionsResult: 10,
+                                user: {
+                                    id: 0,
+                                    imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                                    nickname: 'Liteon X'
+                                }
+                            } }),
+                        React.createElement(ThreadCard_1["default"], { thread: {
+                                id: 0,
+                                title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                                content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel. Fusce vel vehicula felis. Ut sem erat, aliquam ac lectus eu, sagittis ultrices metus. Aliquam venenatis est ut maximus semper. Suspendisse bibendum massa quam, non elementum ex commodo at. Quisque non ligula magna. Phasellus egestas nec massa sit amet sagittis.',
+                                threadReactionsResult: 10,
+                                user: {
+                                    id: 0,
+                                    imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                                    nickname: 'Liteon X'
+                                }
+                            } }),
+                        React.createElement(ThreadCard_1["default"], { thread: {
+                                id: 0,
+                                title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                                content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel. Fusce vel vehicula felis. Ut sem erat, aliquam ac lectus eu, sagittis ultrices metus. Aliquam venenatis est ut maximus semper. Suspendisse bibendum massa quam, non elementum ex commodo at. Quisque non ligula magna. Phasellus egestas nec massa sit amet sagittis.',
+                                threadReactionsResult: 10,
+                                user: {
+                                    id: 0,
+                                    imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                                    nickname: 'Liteon X'
+                                }
+                            } }),
+                        React.createElement(ThreadCard_1["default"], { thread: {
+                                id: 0,
+                                title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                                content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel. Fusce vel vehicula felis. Ut sem erat, aliquam ac lectus eu, sagittis ultrices metus. Aliquam venenatis est ut maximus semper. Suspendisse bibendum massa quam, non elementum ex commodo at. Quisque non ligula magna. Phasellus egestas nec massa sit amet sagittis.',
+                                threadReactionsResult: 10,
+                                user: {
+                                    id: 0,
+                                    imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                                    nickname: 'Liteon X'
+                                }
+                            } }),
+                        React.createElement(ThreadCard_1["default"], { thread: {
+                                id: 0,
+                                title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                                content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel. Fusce vel vehicula felis. Ut sem erat, aliquam ac lectus eu, sagittis ultrices metus. Aliquam venenatis est ut maximus semper. Suspendisse bibendum massa quam, non elementum ex commodo at. Quisque non ligula magna. Phasellus egestas nec massa sit amet sagittis.',
+                                threadReactionsResult: 10,
+                                user: {
+                                    id: 0,
+                                    imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                                    nickname: 'Liteon X'
+                                }
+                            } }),
+                        React.createElement(ThreadCard_1["default"], { thread: {
+                                id: 0,
+                                title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                                content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel. Fusce vel vehicula felis. Ut sem erat, aliquam ac lectus eu, sagittis ultrices metus. Aliquam venenatis est ut maximus semper. Suspendisse bibendum massa quam, non elementum ex commodo at. Quisque non ligula magna. Phasellus egestas nec massa sit amet sagittis.',
+                                threadReactionsResult: 10,
+                                user: {
+                                    id: 0,
+                                    imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                                    nickname: 'Liteon X'
+                                }
+                            } }),
+                        React.createElement(ThreadCard_1["default"], { thread: {
+                                id: 0,
+                                title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                                content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel. Fusce vel vehicula felis. Ut sem erat, aliquam ac lectus eu, sagittis ultrices metus. Aliquam venenatis est ut maximus semper. Suspendisse bibendum massa quam, non elementum ex commodo at. Quisque non ligula magna. Phasellus egestas nec massa sit amet sagittis.',
+                                threadReactionsResult: 10,
+                                user: {
+                                    id: 0,
+                                    imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                                    nickname: 'Liteon X'
+                                }
+                            } }),
+                        React.createElement(ThreadCard_1["default"], { thread: {
+                                id: 0,
+                                title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                                content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel. Fusce vel vehicula felis. Ut sem erat, aliquam ac lectus eu, sagittis ultrices metus. Aliquam venenatis est ut maximus semper. Suspendisse bibendum massa quam, non elementum ex commodo at. Quisque non ligula magna. Phasellus egestas nec massa sit amet sagittis.',
+                                threadReactionsResult: 10,
+                                user: {
+                                    id: 0,
+                                    imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                                    nickname: 'Liteon X'
+                                }
+                            } })),
                     React.createElement("div", { style: {
                             display: "flex",
                             flexDirection: "row",
@@ -149,4 +250,4 @@ function Signin() {
                                 React.createElement("div", null, "#7     Interfacing Sensors with ESP32: A Beginner`s Guide"),
                                 React.createElement("div", null, "#8     Customizing the ESP32 Development Environment")))))))));
 }
-exports["default"] = Signin;
+exports["default"] = Home;

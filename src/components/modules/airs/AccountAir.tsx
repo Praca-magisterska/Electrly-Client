@@ -6,11 +6,10 @@ import AirContentSection from "@/components/layouts/AirContentSection";
 import UserContext from "@/context/UserContext";
 import Link from "next/link";
 import AirContext from "@/context/AirContext";
-import { useTranslation } from "react-i18next";
+import ThreadCard from "@/components/elements/cards/ThreadCard";
 
 
 export default function AccountAir() {
-    const { t } = useTranslation();
     const airContext = useContext(AirContext);
     const userContext = useContext(UserContext);
     
@@ -64,7 +63,7 @@ export default function AccountAir() {
                             backgroundColor: '#5448C8',
                             color: "white"
                         }}>
-                            {t('Manage account')}
+                            Manage account
                         </button>
                     </div>
                     <div style={{
@@ -86,7 +85,7 @@ export default function AccountAir() {
                             border: '2px solid #5448C8',
                             color: "black"
                         }}>
-                            {t('Sign out')}
+                            Sign out
                         </Link>
                     </div>
                 </AirContentSection>
@@ -96,7 +95,9 @@ export default function AccountAir() {
                         flexDirection: "row",
                         justifyContent: "center",
                         width: '100%'
-                    }}></div>
+                    }}>
+                        TODO: Photo!!!
+                    </div>
                     <div style={{
                         display: "flex",
                         flexDirection: "row",
@@ -116,7 +117,7 @@ export default function AccountAir() {
                             backgroundColor: '#5448C8',
                             color: "white"
                         }}>
-                            {t('Sign in')}
+                            Sign in
                         </Link>
                     </div>
                     <div style={{
@@ -155,12 +156,78 @@ export default function AccountAir() {
                             color: "black",
 
                         }}>
-                            {t('Reset password')}
+                            Reset password
                         </Link>
                     </div>
                 </AirContentSection>
-                <AirContentSection title={t("Your threads")}>
-                    TODO: Threads!!!
+                <AirContentSection title={"Your threads"} show={userContext.isSignedOn}>
+                    {/* TODO: Threads!!! */}
+                    <ThreadCard showUser={false} thread={{
+                    id: 0,
+                    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel.',
+                    threadReactionsResult: 10,
+                    user: {
+                      id: 0,
+                      imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                      nickname: 'Liteon X'
+                    }
+                  }}/>
+                  <ThreadCard showUser={false} thread={{
+                    id: 0,
+                    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel.',
+                    threadReactionsResult: 10,
+                    user: {
+                      id: 0,
+                      imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                      nickname: 'Liteon X'
+                    }
+                  }}/>
+                  <ThreadCard showUser={false} thread={{
+                    id: 0,
+                    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel.',
+                    threadReactionsResult: 10,
+                    user: {
+                      id: 0,
+                      imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                      nickname: 'Liteon X'
+                    }
+                  }}/>
+                  <ThreadCard showUser={false} thread={{
+                    id: 0,
+                    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel.',
+                    threadReactionsResult: 10,
+                    user: {
+                      id: 0,
+                      imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                      nickname: 'Liteon X'
+                    }
+                  }}/>
+                  <ThreadCard showUser={false} thread={{
+                    id: 0,
+                    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel.',
+                    threadReactionsResult: 10,
+                    user: {
+                      id: 0,
+                      imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                      nickname: 'Liteon X'
+                    }
+                  }}/>
+                  <ThreadCard showUser={false} thread={{
+                    id: 0,
+                    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut dignissim massa, nec tempor metus. In viverra odio odio, ac vehicula quam congue vel.',
+                    threadReactionsResult: 10,
+                    user: {
+                      id: 0,
+                      imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                      nickname: 'Liteon X'
+                    }
+                  }}/>
                 </AirContentSection>
             </AirContent>
         </Air>
