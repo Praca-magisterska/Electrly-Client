@@ -4,7 +4,7 @@ var link_1 = require("next/link");
 var ThreadReactionCard_1 = require("./ThreadReactionCard");
 function ThreadCard(_a) {
     var thread = _a.thread, _b = _a.showUser, showUser = _b === void 0 ? true : _b;
-    return (React.createElement(link_1["default"], { href: '/threads/' + thread.id, style: {
+    return (React.createElement(link_1["default"], { href: '/community/threads/' + thread.id, style: {
             display: "flex",
             flexDirection: "row",
             justifyContent: "center",
@@ -42,7 +42,7 @@ function ThreadCard(_a) {
                         gap: 16
                     } },
                     showUser ?
-                        React.createElement(link_1["default"], { href: '/users/' + thread.user.id, style: {
+                        React.createElement(link_1["default"], { href: '/community/people/' + thread.user.id, style: {
                                 height: 48,
                                 display: 'flex',
                                 flexDirection: 'row',

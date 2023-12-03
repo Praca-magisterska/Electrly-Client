@@ -25,10 +25,10 @@ export default function GateModuleBar() {
                 <ModuleBarButton href="/" activeHrefPattern="^/$" label="Home">
                     <HomeOutlinedIcon />
                 </ModuleBarButton>
-                <ModuleBarButton href="/categories" activeHrefPattern="/categories" label="Categories">
+                <ModuleBarButton href="/community/threads/categories" activeHrefPattern="/community/threads/categories" label="Categories">
                     <CategoryOutlinedIcon />
                 </ModuleBarButton>
-                <ModuleBarButton activeHrefPattern="/thread" hidden={true} label="Thread">
+                <ModuleBarButton activeHrefPattern="/community/threads" disactiveHrefPattern="/community/threads/categories" hidden={true} label="Thread">
                     <NewspaperOutlinedIcon />
                 </ModuleBarButton>
             </div>
@@ -41,16 +41,16 @@ export default function GateModuleBar() {
                 justifyContent: 'flex-start',
                 gap: 8,
             }}>
-                <ModuleBarButton href="/signup" activeHrefPattern="/signup" hidden={true} label="Sign up">
+                <ModuleBarButton href="/gate/signup" activeHrefPattern="/gate/signup" hidden={true} label="Sign up">
                     <PersonAddOutlinedIcon />
                 </ModuleBarButton>
-                <ModuleBarButton href="/signin" activeHrefPattern="/signin" hidden={true} label="Sign in">
+                <ModuleBarButton href="/gate/signin" activeHrefPattern="/gate/signin" hidden={true} label="Sign in">
                     <LoginOutlinedIcon />
                 </ModuleBarButton>
-                <ModuleBarButton href="/reset" activeHrefPattern="/reset" hidden={true} label="Reset password">
+                <ModuleBarButton href="/gate/reset" activeHrefPattern="/gate/reset" hidden={true} label="Reset password">
                     <LockResetOutlinedIcon />
                 </ModuleBarButton>
-                <ModuleBarButton href="/signout" activeHrefPattern="/signout" hidden={true} label="Sign out">
+                <ModuleBarButton href="/gate/signout" activeHrefPattern="/gate/signout" hidden={true} label="Sign out">
                     <LogoutOutlinedIcon />
                 </ModuleBarButton>
                 <ModuleBarSizeButton />

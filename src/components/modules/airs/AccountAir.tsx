@@ -74,7 +74,7 @@ export default function AccountAir() {
                         fontSize: 16,
                         fontWeight: 500
                     }}>
-                        <Link href={"/signout"} style={{
+                        <Link href={"/gate/signout"} style={{
                             display: "flex",
                             flexDirection: "row",
                             alignItems: "center",
@@ -106,7 +106,7 @@ export default function AccountAir() {
                         fontSize: 16,
                         fontWeight: 700
                     }}>
-                        <Link href={"/signin"} style={{
+                        <Link href={"/gate/signin"} style={{
                             display: "flex",
                             flexDirection: "row",
                             alignItems: "center",
@@ -130,7 +130,7 @@ export default function AccountAir() {
                         fontWeight: 500,
                         gap: 13
                     }}>
-                        <Link href={"/signup"} style={{
+                        <Link href={"/gate/signup"} style={{
                             display: "flex",
                             flexDirection: "row",
                             alignItems: "center",
@@ -143,7 +143,7 @@ export default function AccountAir() {
                         }}>
                             Sign up
                         </Link>
-                        <Link href={"/reset"} style={{
+                        <Link href={"/gate/reset"} style={{
                             display: "flex",
                             flexDirection: "row",
                             alignItems: "center",

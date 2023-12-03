@@ -9,7 +9,7 @@ export default function ThreadCard({
     showUser?: boolean
 }) {
     return (
-        <Link href={'/threads/'+thread.id} style={{
+        <Link href={'/community/threads/'+thread.id} style={{
             display: "flex",
             flexDirection: "row",
             justifyContent: "center",
@@ -47,7 +47,7 @@ export default function ThreadCard({
                         gap: 16
                     }}>
                         {showUser ?
-                            <Link href={'/users/'+thread.user.id} style={{
+                            <Link href={'/community/people/'+thread.user.id} style={{
                                 height: 48,
                                 display: 'flex',
                                 flexDirection: 'row',

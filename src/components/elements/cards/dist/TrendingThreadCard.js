@@ -3,7 +3,7 @@ exports.__esModule = true;
 var link_1 = require("next/link");
 function TrendingThreadCard(_a) {
     var thread = _a.thread;
-    return (React.createElement(link_1["default"], { href: '/threads/' + thread.id, style: {
+    return (React.createElement(link_1["default"], { href: '/community/threads/' + thread.id, style: {
             maxWidth: 226,
             minWidth: 150,
             width: '14%',

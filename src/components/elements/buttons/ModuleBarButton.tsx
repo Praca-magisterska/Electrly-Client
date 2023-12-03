@@ -11,6 +11,7 @@ export default function ModuleBarButton(
     label,
     href,
     activeHrefPattern,
+    disactiveHrefPattern,
     hidden = false,
     hiddenFromSignedIn = false,
     hiddenAfterSignedIn = false,
@@ -19,6 +20,7 @@ export default function ModuleBarButton(
     label?: string,
     href?: string,
     activeHrefPattern: string,
+    disactiveHrefPattern?: string,
     hidden?: boolean,
     hiddenFromSignedIn?: boolean,
     hiddenAfterSignedIn?: boolean,
@@ -28,6 +30,7 @@ export default function ModuleBarButton(
 
     const pathname = usePathname();
     let here = pathname.match(activeHrefPattern);
+    if(disactiveHrefPattern && pathname.match(disactiveHrefPattern)) here = null;
 
     if(!href) href = pathname;
 

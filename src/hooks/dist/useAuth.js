@@ -151,7 +151,7 @@ function useAuth() {
                 setStage(stage + 1);
                 localStorage.removeItem('access_token');
                 localStorage.removeItem('refresh_token');
-                window.location.href = '/signin';
+                window.location.href = '/gate/signin';
                 return res;
             })["catch"](function (err) {
                 return err;

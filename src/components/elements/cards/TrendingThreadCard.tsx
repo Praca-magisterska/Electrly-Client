@@ -6,7 +6,7 @@ export default function TrendingThreadCard({
     thread: any
 }) {
     return (
-        <Link href={'/threads/'+thread.id} style={{
+        <Link href={'/community/threads/'+thread.id} style={{
             maxWidth: 226,
             minWidth: 150,
             width: '14%',

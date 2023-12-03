@@ -11,7 +11,7 @@ function UserSearchCard({
     user: any
 }) {
     return (
-        <Link href={'/users/'+user.id} style={{
+        <Link href={'/community/people/'+user.id} style={{
             height: 48,
             display: 'flex',
             flexDirection: 'row',

@@ -7,7 +7,7 @@ var ArticleOutlined_1 = require("@mui/icons-material/ArticleOutlined");
 var link_1 = require("next/link");
 function HelpArticleCard(_a) {
     var article = _a.article;
-    return (React.createElement(link_1["default"], { href: '/answers/' + article.id, style: {
+    return (React.createElement(link_1["default"], { href: '/support/answers/' + article.id, style: {
             display: "flex",
             flexDirection: "row",
             gap: 8

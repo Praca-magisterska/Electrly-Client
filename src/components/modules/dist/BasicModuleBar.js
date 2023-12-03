@@ -20,9 +20,9 @@ function GateModuleBar() {
             } },
             React.createElement(ModuleBarButton_1["default"], { href: "/", activeHrefPattern: "^/$", label: "Home" },
                 React.createElement(HomeOutlined_1["default"], null)),
-            React.createElement(ModuleBarButton_1["default"], { href: "/categories", activeHrefPattern: "/categories", label: "Categories" },
+            React.createElement(ModuleBarButton_1["default"], { href: "/community/threads/categories", activeHrefPattern: "/community/threads/categories", label: "Categories" },
                 React.createElement(CategoryOutlined_1["default"], null)),
-            React.createElement(ModuleBarButton_1["default"], { activeHrefPattern: "/thread", hidden: true, label: "Thread" },
+            React.createElement(ModuleBarButton_1["default"], { activeHrefPattern: "/community/threads", disactiveHrefPattern: "/community/threads/categories", hidden: true, label: "Thread" },
                 React.createElement(NewspaperOutlined_1["default"], null))), bottom: React.createElement("div", { style: {
                 display: 'flex',
                 flexDirection: 'column',
@@ -30,13 +30,13 @@ function GateModuleBar() {
                 justifyContent: 'flex-start',
                 gap: 8
             } },
-            React.createElement(ModuleBarButton_1["default"], { href: "/signup", activeHrefPattern: "/signup", hidden: true, label: "Sign up" },
+            React.createElement(ModuleBarButton_1["default"], { href: "/gate/signup", activeHrefPattern: "/gate/signup", hidden: true, label: "Sign up" },
                 React.createElement(PersonAddOutlined_1["default"], null)),
-            React.createElement(ModuleBarButton_1["default"], { href: "/signin", activeHrefPattern: "/signin", hidden: true, label: "Sign in" },
+            React.createElement(ModuleBarButton_1["default"], { href: "/gate/signin", activeHrefPattern: "/gate/signin", hidden: true, label: "Sign in" },
                 React.createElement(LoginOutlined_1["default"], null)),
-            React.createElement(ModuleBarButton_1["default"], { href: "/reset", activeHrefPattern: "/reset", hidden: true, label: "Reset password" },
+            React.createElement(ModuleBarButton_1["default"], { href: "/gate/reset", activeHrefPattern: "/gate/reset", hidden: true, label: "Reset password" },
                 React.createElement(LockResetOutlined_1["default"], null)),
-            React.createElement(ModuleBarButton_1["default"], { href: "/signout", activeHrefPattern: "/signout", hidden: true, label: "Sign out" },
+            React.createElement(ModuleBarButton_1["default"], { href: "/gate/signout", activeHrefPattern: "/gate/signout", hidden: true, label: "Sign out" },
                 React.createElement(LogoutOutlined_1["default"], null)),
             React.createElement(ModuleBarSizeButton_1["default"], null)) }));
 }

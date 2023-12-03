@@ -7,10 +7,12 @@ var module_bar_module_scss_1 = require("../../../styles/module_bar.module.scss")
 var react_1 = require("react");
 var ModuleBarContext_1 = require("@/context/ModuleBarContext");
 function ModuleBarButton(_a) {
-    var label = _a.label, href = _a.href, activeHrefPattern = _a.activeHrefPattern, _b = _a.hidden, hidden = _b === void 0 ? false : _b, _c = _a.hiddenFromSignedIn, hiddenFromSignedIn = _c === void 0 ? false : _c, _d = _a.hiddenAfterSignedIn, hiddenAfterSignedIn = _d === void 0 ? false : _d, children = _a.children;
+    var label = _a.label, href = _a.href, activeHrefPattern = _a.activeHrefPattern, disactiveHrefPattern = _a.disactiveHrefPattern, _b = _a.hidden, hidden = _b === void 0 ? false : _b, _c = _a.hiddenFromSignedIn, hiddenFromSignedIn = _c === void 0 ? false : _c, _d = _a.hiddenAfterSignedIn, hiddenAfterSignedIn = _d === void 0 ? false : _d, children = _a.children;
     var moduleBarContext = react_1.useContext(ModuleBarContext_1["default"]);
     var pathname = navigation_1.usePathname();
     var here = pathname.match(activeHrefPattern);
+    if (disactiveHrefPattern && pathname.match(disactiveHrefPattern))
+        here = null;
     if (!href)
         href = pathname;
     var classNames = [module_bar_module_scss_1["default"].module_bar_button__icon];

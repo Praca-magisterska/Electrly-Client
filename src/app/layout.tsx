@@ -22,6 +22,8 @@ import AccountAir from '@/components/modules/airs/AccountAir'
 import SettingsAir from '@/components/modules/airs/SettingsAir'
 import HelpAir from '@/components/modules/airs/HelpAir'
 import SearchAir from '@/components/modules/airs/SearchAir'
+import Module from '@/components/layouts/Module'
+import GateModuleBar from '@/components/modules/BasicModuleBar'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -58,7 +60,11 @@ export default function RootLayout({
                       <SearchAir/>
                     </>
                   }>
-                    {children}
+                    <Module bar = {
+                        <GateModuleBar />
+                    }>
+                        {children}
+                    </Module>
                   </App>
                   <ToastContainer
                     position="top-center"

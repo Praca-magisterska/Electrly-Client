@@ -8,7 +8,7 @@ var SearchOutlined_1 = require("@mui/icons-material/SearchOutlined");
 var link_1 = require("next/link");
 function UserSearchCard(_a) {
     var user = _a.user;
-    return (React.createElement(link_1["default"], { href: '/users/' + user.id, style: {
+    return (React.createElement(link_1["default"], { href: '/community/people/' + user.id, style: {
             height: 48,
             display: 'flex',
             flexDirection: 'row',

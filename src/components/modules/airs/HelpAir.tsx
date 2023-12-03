@@ -11,7 +11,7 @@ function HelpArticleCard({
     article: any
 }) {
     return (
-        <Link href={'/answers/'+article.id} style={{
+        <Link href={'/support/answers/'+article.id} style={{
             display: "flex",
             flexDirection: "row",
             gap: 8

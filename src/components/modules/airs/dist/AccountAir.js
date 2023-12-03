@@ -68,7 +68,7 @@ function AccountAir() {
                         fontSize: 16,
                         fontWeight: 500
                     } },
-                    React.createElement(link_1["default"], { href: "/signout", style: {
+                    React.createElement(link_1["default"], { href: "/gate/signout", style: {
                             display: "flex",
                             flexDirection: "row",
                             alignItems: "center",
@@ -94,7 +94,7 @@ function AccountAir() {
                         fontSize: 16,
                         fontWeight: 700
                     } },
-                    React.createElement(link_1["default"], { href: "/signin", style: {
+                    React.createElement(link_1["default"], { href: "/gate/signin", style: {
                             display: "flex",
                             flexDirection: "row",
                             alignItems: "center",
@@ -115,7 +115,7 @@ function AccountAir() {
                         fontWeight: 500,
                         gap: 13
                     } },
-                    React.createElement(link_1["default"], { href: "/signup", style: {
+                    React.createElement(link_1["default"], { href: "/gate/signup", style: {
                             display: "flex",
                             flexDirection: "row",
                             alignItems: "center",
@@ -126,7 +126,7 @@ function AccountAir() {
                             border: '2px solid #5448C8',
                             color: "black"
                         } }, "Sign up"),
-                    React.createElement(link_1["default"], { href: "/reset", style: {
+                    React.createElement(link_1["default"], { href: "/gate/reset", style: {
                             display: "flex",
                             flexDirection: "row",
                             alignItems: "center",

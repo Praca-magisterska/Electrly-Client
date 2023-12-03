@@ -3,7 +3,7 @@ exports.__esModule = true;
 var link_1 = require("next/link");
 function TrendingThreadCard(_a) {
     var category = _a.category;
-    return (React.createElement(link_1["default"], { href: '/categories/' + category.id, style: {
+    return (React.createElement(link_1["default"], { href: '/community/threads/categories/' + category.id, style: {
             width: 200,
             height: 160,
             display: 'flex',
