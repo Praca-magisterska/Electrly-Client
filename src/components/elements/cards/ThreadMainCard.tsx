@@ -93,7 +93,26 @@ export default function ThreadMainCard({
                                     fontSize: 12,
                                     fontWeight: 400
                                 }}>
-                                    {thread.content}  
+                                    {thread.content}
+                                    <Link href={'/community/threads/create'} style={{
+                                        display: "flex",
+                                        marginTop: 20,
+                                        flexDirection: "row",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        minHeight: 40,
+                                        minWidth: 50,
+                                        maxWidth: 150,
+                                        width: '35%',
+                                        borderRadius: 8,
+                                        backgroundColor: '#5448C8',
+                                        color: "white",
+                                        fontSize: 12,
+                                        fontWeight: 700
+                                    }}>
+                                        Write New Answer
+                                    </Link> 
+                                    
                                 </div>
                             </div>  
                         </div>
