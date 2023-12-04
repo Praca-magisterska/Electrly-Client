@@ -3,16 +3,17 @@ import ThreadReactionCard from "./ThreadReactionCard"
 import Page from "@/components/layouts/Page"
 import PageContent from "@/components/layouts/PageContent"
 import PageContentSection from "@/components/layouts/PageContentSection"
+import ThreadCommentReactionCard from "./ThreadCommentReactionCard"
 
 export default function ThreadMainCard({
-    thread,
+    comment,
     showUser = true
 }: {
-    thread: any,
+    comment: any,
     showUser?: boolean
 }) {
     return(
-                <div title="Thread title">
+                <div title="Answers">
                     <div style={{
                     display: "flex",
                     flexDirection: "row",
@@ -21,7 +22,7 @@ export default function ThreadMainCard({
                     backgroundColor: "white",
                     borderRadius: 8,
                     minHeight: 176,
-                    width: '100%'
+                    width: '85%'
                     }}>
                         <div style={{
                             width: 'calc(100% - 32px)',
@@ -33,7 +34,7 @@ export default function ThreadMainCard({
                             justifyContent: "flex-start",
                             gap: 16
                         }}>
-                            <ThreadReactionCard thread={thread}/>
+                            <ThreadCommentReactionCard comment={comment}/>
                             <div style={{
                                 width: '100%',
                                 display: "flex",
@@ -51,7 +52,7 @@ export default function ThreadMainCard({
                                     gap: 16
                                 }}>
                                     {showUser ?
-                                        <Link href={'/community/people/'+thread.user.id} style={{
+                                        <Link href={'/community/people/'+comment.user.id} style={{
                                             height: 48,
                                             display: 'flex',
                                             flexDirection: 'row',
@@ -64,7 +65,7 @@ export default function ThreadMainCard({
                                                 width: 48,
                                                 height: 48,
                                                 borderRadius: 100,
-                                                background: 'url(' + thread.user.imageUrl + ')',
+                                                background: 'url(' + comment.user.imageUrl + ')',
                                                 backgroundSize: 'cover',
                                                 backgroundPosition: 'center',
                                             }}/>
@@ -72,7 +73,7 @@ export default function ThreadMainCard({
                                                 fontSize: 12,
                                                 fontWeight: 500
                                             }}>
-                                                Posted by {thread.user.nickname}
+                                                Answered by {comment.user.nickname}
                                             </div>
                                         </Link>
                                     :null}
@@ -80,20 +81,14 @@ export default function ThreadMainCard({
                                         fontSize: 12,
                                         fontWeight: 500
                                     }}>
-                                        3 Hours Ago
+                                        1 Hour Ago
                                     </div>
-                                </div>
-                                <div style={{
-                                    fontSize: 16,
-                                    fontWeight: 700
-                                }}>
-                                    {thread.title}
                                 </div>
                                 <div style={{
                                     fontSize: 12,
                                     fontWeight: 400
                                 }}>
-                                    {thread.content}  
+                                    {comment.content}  
                                 </div>
                             </div>  
                         </div>
