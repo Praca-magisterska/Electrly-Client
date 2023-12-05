@@ -5,7 +5,7 @@ import PageContent from "@/components/layouts/PageContent"
 import PageContentSection from "@/components/layouts/PageContentSection"
 import ThreadCommentReactionCard from "./ThreadCommentReactionCard"
 
-export default function ThreadMainCard({
+export default function ThreadCommentCard({
     comment,
     showUser = true
 }: {

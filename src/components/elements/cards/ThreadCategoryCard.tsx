@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export default function TrendingThreadCard({
+export default function ThreadCategoryCard({
     category
 }: {
     category: any
